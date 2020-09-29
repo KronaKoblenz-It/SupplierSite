@@ -1,0 +1,1809 @@
+# Webalizer V2.01-10 Incremental Data - 04/17/2018 22:39:26
+2018 4 17 22 39 26
+22170 19934 264 227 83 89 170180206 19115 867 0 0 0
+35 4 568 1 17
+34 15 71170 12 8 7 0 0
+427 405 624465 15 386 19 0 0
+1638 1516 12541995 33 1403 64 0 0
+1683 1553 16930540 28 1416 68 0 0
+2378 2200 17204014 40 2114 80 0 0
+1433 1310 10698157 28 1282 51 0 0
+28 22 195651 9 22 11 0 0
+24 18 67580 19 14 12 0 0
+1825 1706 15779004 29 1603 72 0 0
+1923 1798 15296896 38 1577 78 0 0
+2144 2033 15234589 25 1998 74 0 0
+1924 1757 16476518 27 1661 75 0 0
+1373 1276 7004185 28 1206 68 0 0
+71 53 423162 32 52 29 0 0
+485 36 857528 15 394 15 0 0
+1923 1778 19213902 28 1651 70 0 0
+2857 2458 21560850 35 2328 74 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+79 59 247153 45 0 0
+37 26 107283 13 0 0
+15 11 48537 7 0 0
+23 8 65267 6 0 0
+14 4 13553 12 0 0
+8 6 6015 4 0 0
+13 10 83063 5 0 0
+273 251 2411694 229 0 0
+2148 2038 22863944 1883 0 0
+2807 2600 22054427 2355 0 0
+1986 1814 17430458 1713 0 0
+3119 2424 18798994 2656 0 0
+1483 1355 10376159 1346 0 0
+899 853 5995603 866 0 0
+1989 1860 21867458 1678 0 0
+2186 1998 18161983 1885 0 0
+2165 1899 16778377 1849 0 0
+1279 1155 8399574 1133 0 0
+850 822 2673941 784 0 0
+620 608 1421759 540 0 0
+83 70 195300 42 0 0
+13 6 13995 9 0 0
+44 33 92053 30 0 0
+37 24 73616 25 0 0
+0
+0
+0
+19934
+0
+0
+0
+0
+0
+0
+0
+2
+1160
+0
+617
+0
+0
+0
+0
+0
+1
+363
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+93
+0
+0
+0
+0
+0
+# -urls- 
+/css/DataTables-1.10.10/images/sort_asc.png
+1 100 0 12800 0 0 0 0
+/css/jquery.dataTables.yadcf.css
+0 79 0 35563 0 0 0 0
+/phpmyadmin/themes/original/img/s_status.png
+1 1 0 313 0 0 0 0
+/phpmyadmin/main.php
+0 2 108 14491 0 0 0 0
+/phpmyadmin/themes/original/img/b_deltbl.png
+1 1 0 364 0 0 0 0
+/js/ajaxlib.js
+0 62 0 29171 0 0 0 0
+/germania/login.php
+0 2 0 2692 2 0 0 0
+/spagna/doc-detail.php
+0 87 0 166907 5 1 0 0
+/img/b_check.png
+1 4 0 27156 0 0 0 0
+/krona/etich1_weight.php
+0 81 0 299753 0 0 0 0
+/phpmyadmin/themes/original/img/b_calendar.png
+1 1 0 308 0 0 0 0
+/krona/etich_india_CF.php
+0 15 0 20867 0 2 0 0
+/krona/giacArtDetail.php
+0 106 0 324728 0 9 0 0
+/phpmyadmin/themes/original/img/logo_left.png
+1 1 33 6854 0 0 0 0
+/phpmyadmin/themes/original/img/b_primary.png
+1 1 0 416 0 0 0 0
+/krona/rlimportxls.php
+0 33 0 44566 0 1 0 0
+/img/mfe_green.png
+1 223 0 303555 0 0 0 0
+/phpmyadmin/themes/original/img/b_empty.png
+1 1 0 298 0 0 0 0
+/phpmyadmin/themes/original/img/arrow_ltr.png
+1 1 0 277 0 0 0 0
+/phpmyadmin/themes/original/img/s_success.png
+1 1 0 612 0 0 0 0
+/phpmyadmin/themes/original/img/b_edit.png
+1 1 0 451 0 0 0 0
+/phpmyadmin/themes/original/img/b_tblimport.png
+1 1 0 280 0 0 0 0
+/krona/bollecons.php
+0 90 0 533049 1 6 0 0
+/phpmyadmin/js/common.js
+0 1 36 3118 0 0 0 0
+/krona/etich1lotti_unificate.php
+0 207 0 35316059 0 29 0 0
+/img/download.png
+1 54 0 27285 0 0 0 0
+/germania.jpg
+1 3 0 3855 0 0 0 0
+/krona/menu-for.php
+0 1308 0 1883894 35 50 0 0
+/krona/cli-detail.php
+0 274 0 2403592 12 2 0 0
+/phpmyadmin/themes/original/img/b_selboard.png
+1 1 2 274 0 0 0 0
+/phpmyadmin/themes/original/img/b_newdb.png
+1 1 0 408 0 0 0 0
+/krona/
+0 177 0 212400 18 11 0 0
+/phpmyadmin/themes/original/img/b_newtbl.png
+1 1 0 409 0 0 0 0
+/spagna/05_edit.gif
+1 1 0 182 0 0 0 0
+/krona/manualistica.php
+0 4 0 6144 1 0 0 0
+/spagna/enter.php
+0 1 0 20 3 0 0 0
+/phpmyadmin/themes/original/img/s_process.png
+1 1 0 362 0 0 0 0
+/phpmyadmin/themes/original/img/s_asc.png
+1 1 0 213 0 0 0 0
+/krona/etich.php
+0 223 0 30236129 4 35 0 0
+/spagna/login.php
+0 57 0 77767 39 0 0 0
+/spagna/menu-for.php
+0 6 0 8788 0 0 0 0
+/css/DataTables-1.10.10/images/sort_desc.png
+1 14 0 2054 0 0 0 0
+/krona/updWebMovs.php
+0 153 0 172737 1 4 0 0
+/francia/francia.jpg
+1 4 0 124431 0 0 0 0
+/phpmyadmin/themes/original/img/b_unique.png
+1 1 0 281 0 0 0 0
+/img/b_home.gif
+1 140 0 18025 0 0 0 0
+/phpmyadmin/themes/original/img/b_tblexport.png
+1 1 0 283 0 0 0 0
+/spagna/spagna.jpg
+1 21 0 629147 0 0 0 0
+/phpmyadmin/
+0 8 1 14255 2 2 0 0
+/phpmyadmin/js/mooRainbow/mooRainbow.js
+0 1 294 4470 0 0 0 0
+/krona/artcons-rett.php
+0 6 0 6777 0 0 0 0
+/krona/krona.jpg
+1 225 0 6383258 0 0 0 0
+/italia.jpg
+1 3 0 3543 0 0 0 0
+/phpmyadmin/themes/original/img/b_index.png
+1 1 0 315 0 0 0 0
+/js/jquery.dataTables.yadcf.js
+0 75 0 1345234 0 0 0 0
+/phpmyadmin/themes/original/img/s_db.png
+1 1 0 285 0 0 0 0
+/krona/menu-cli.php
+0 4 0 5102 0 0 0 0
+/francia/cli-detail.php
+0 12 0 24438 1 0 0 0
+/russia/russia.jpg
+1 1 0 35861 0 0 0 0
+/phpmyadmin/themes/original/img/b_sbrowse.png
+1 1 0 197 0 0 0 0
+/krona/xls2inv.php
+0 1 0 3327 0 0 0 0
+/spagna/rnc.php
+0 1 0 1614 0 0 0 0
+/spagna/rubrica-cli.php
+0 8 0 52444 0 1 0 0
+/phpmyadmin/js/mooRainbow/images/rainbow.png
+1 1 0 794 0 0 0 0
+/phpmyadmin/themes/original/img/s_fulltext.png
+1 1 0 308 0 0 0 0
+/phpmyadmin/themes/original/img/s_theme.png
+1 1 0 737 0 0 0 0
+/js/select_lib.js
+0 62 0 15314 0 0 0 0
+/spagna/menu-cli.php
+0 8 0 10244 0 0 0 0
+/phpmyadmin/js/mooRainbow/images/moor_slider.png
+1 1 0 590 0 0 0 0
+/img/printer.png
+1 87 0 26970 0 0 0 0
+/krona/etich1lotti_unificate_PZ.php
+0 138 0 24045726 0 14 0 0
+/phpmyadmin/themes/original/img/b_tblops.png
+1 1 0 345 0 0 0 0
+/phpmyadmin/themes/original/img/b_sqlhelp.png
+1 1 1 287 0 0 0 0
+/spagna/menu.php
+0 47 0 59815 2 3 0 0
+/phpmyadmin/js/tbl_change.js
+0 1 0 2969 0 0 0 0
+/krona/creadocxml.php
+0 2 0 2408 0 0 0 0
+/phpmyadmin/themes/original/img/s_warn.png
+1 1 0 261 0 0 0 0
+/libs/barcodelotto.php
+0 261 0 60872 0 53 0 0
+/img/error.png
+1 12 0 4968 0 0 0 0
+/krona/askdb.php
+0 1015 0 4940417 54 17 0 0
+/krona/rnc-write.php
+0 2 0 2801 0 0 0 0
+/img/10_pdf.gif
+1 7 0 1456 0 0 0 0
+/krona/manuali/02b_Rettifica Componenti ArcaWeb.pdf
+0 1 0 766226 0 0 0 0
+/krona/rnc.php
+0 4 0 10620 1 0 0 0
+/libs/barcodeimage.php
+0 261 0 256711 68 0 0 0
+/js/jquery-1.10.1.min.js
+0 7 0 197022 0 0 0 0
+/phpmyadmin/themes/original/img/s_asci.png
+1 1 0 254 0 0 0 0
+/phpmyadmin/themes/original/img/b_tblanalyse.png
+1 1 0 296 0 0 0 0
+/phpmyadmin/themes/original/img/s_vars.png
+1 1 0 306 0 0 0 0
+/spagna/ord-cli.php
+0 58 0 224771 3 2 0 0
+/img/browserany.gif
+1 237 0 252320 0 0 0 0
+/phpmyadmin/themes/original/img/b_ftext.png
+1 1 0 277 0 0 0 0
+/krona/ddttoload.php
+0 234 0 514294 4 23 0 0
+/krona/inv-list.php
+0 7 0 12714 1 0 0 0
+/js/dropdown_lib.js
+0 31 0 102206 0 0 0 0
+/krona/getopenddtx.php
+0 1208 0 1019345 0 2 0 0
+/phpmyadmin/themes/original/img/bd_select.png
+1 1 0 524 0 0 0 0
+/phpmyadmin/themes/original/img/b_insrow.png
+1 1 0 283 0 0 0 0
+/krona/manuali/05_Rettifiche_articoli_consegnati_WEB .pdf
+0 1 0 447902 0 0 0 0
+/krona/xls2tbl.php
+0 23 0 203893 0 0 0 0
+/krona/doc2xml.php
+0 5 0 29086 0 1 0 0
+/krona/import-db.php
+0 1224 0 1455479 115 0 0 0
+/phpmyadmin/navigation.php
+0 6 385 28677 0 0 0 0
+/phpmyadmin/themes/original/img/b_props.png
+1 1 0 294 0 0 0 0
+/francia/import-db.php
+0 994 0 1201828 0 0 0 0
+/krona/rnc-make.php
+0 2 0 4930 0 0 0 0
+/krona/manuali-clienti/Scarico_documenti_clienti_XLS_XLM.pdf
+0 1 0 2323580 0 0 0 0
+/phpmyadmin/themes/original/img/s_really.png
+1 1 0 229 0 0 0 0
+/krona/import-users.php
+0 142 0 468600 0 0 0 0
+/spagna/cli-detail.php
+0 51 0 105659 1 0 0 0
+/krona/creadoc.php
+0 318 0 388489 1 7 0 0
+/js/jquery-1.12.4.min.js
+0 75 0 1586720 0 0 0 0
+/krona/xls2doc.php
+0 6 0 7808 0 0 0 0
+/spagna.jpg
+1 3 0 3873 0 0 0 0
+/krona/manualistica-clienti.php
+0 1 0 1282 0 0 0 0
+/css/images/ui-bg_glass_100_f6f6f6_1x400.png
+1 15 0 4704 0 0 0 0
+/robots.txt
+0 78 0 2252 0 0 0 0
+/css/jquery-ui.min.css
+0 84 0 498168 0 0 0 0
+/krona/etich_india_SC.php
+0 7 0 9941 0 1 0 0
+/spagna/import-db.php
+0 994 0 1211728 4 0 0 0
+/krona/artcons.php
+0 8 0 39489 0 0 0 0
+/francia/menu-for.php
+0 10 0 14570 0 0 0 0
+/krona/login.php
+0 824 0 1148849 352 27 0 0
+/krona/inv_xls.php
+0 6 0 10952 1 0 0 0
+/phpmyadmin/themes/original/img/s_notice.png
+1 1 0 247 0 0 0 0
+/spagna/ddt-detail.php
+0 1 0 1358 0 0 0 0
+/krona/moddb.php
+0 1 0 2193 0 0 0 0
+/phpmyadmin/themes/original/img/window-new.png
+1 1 0 583 0 0 0 0
+/krona/ksimportxls.php
+0 10 0 13420 0 0 0 0
+/krona/getopenordx.php
+0 1209 0 265884 18 1 0 0
+/favicon.ico
+0 151 0 129630 0 0 0 0
+/phpmyadmin/themes/original/img/s_host.png
+1 1 0 316 0 0 0 0
+/phpmyadmin/themes/original/img/b_docs.png
+1 1 0 292 0 0 0 0
+/krona/getdoppiocollox.php
+0 590 0 127693 0 3 0 0
+/phpmyadmin/js/tooltip.js
+0 1 165 1673 0 0 0 0
+/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png
+1 15 0 5614 0 0 0 0
+/phpmyadmin/js/navigation.js
+0 1 1 1521 0 0 0 0
+/krona/eticha4.php
+0 1 0 46319 0 0 0 0
+/krona/eticha4lotti.php
+0 9 0 107174 0 0 0 0
+/krona/xls2invdb.php
+0 1 0 1261 0 0 0 0
+/francia.jpg
+1 3 0 3810 0 0 0 0
+/francia/etich.php
+0 32 0 8342792 2 3 0 0
+/phpmyadmin/themes/original/img/s_passwd.png
+1 1 0 505 0 0 0 0
+/krona/getaltcodex.php
+0 2076 0 384819 11 18 0 0
+/phpmyadmin/themes/original/img/b_select.png
+1 1 0 540 0 0 0 0
+/css/images/ui-icons_ef8c08_256x240.png
+1 9 0 41877 0 0 0 0
+/krona/okdoc.php
+0 6 0 7248 0 0 0 0
+/phpmyadmin/themes/original/img/bd_empty.png
+1 1 0 298 0 0 0 0
+/phpmyadmin/themes/original/img/b_home.png
+1 1 121 370 0 0 0 0
+/style.css
+0 279 0 199707 0 0 0 0
+/phpmyadmin/themes/original/img/s_loggoff.png
+1 1 1 262 0 0 0 0
+/krona/giornalemaga.php
+0 178 0 3622136 2 6 0 0
+/phpmyadmin/js/mootools.js
+0 1 32 20902 0 0 0 0
+/phpmyadmin/themes/original/img/b_views.png
+1 1 0 477 0 0 0 0
+/phpmyadmin/tbl_select.php
+0 1 0 4960 0 0 0 0
+/phpmyadmin/themes/original/img/b_info.png
+1 1 0 234 0 0 0 0
+/krona/art-doc_list.php
+0 225 0 424556 1 8 0 0
+/phpmyadmin/themes/original/img/bd_browse.png
+1 1 0 265 0 0 0 0
+/phpmyadmin/print.css
+0 1 0 311 0 0 0 0
+/phpmyadmin/js/functions.js
+0 1 2 12082 0 0 0 0
+/phpmyadmin/themes/original/img/s_lang.png
+1 1 0 422 0 0 0 0
+/js/jquery.tablesorter.min.js
+0 5 0 19384 0 0 0 0
+/img/b_drop.png
+1 26 0 8086 0 0 0 0
+/krona/doc-detail.php
+0 249 0 715817 1 6 0 0
+/js/dbedit.js
+0 28 0 18308 0 0 0 0
+/phpmyadmin/themes/original/img/logo_right.png
+1 1 0 5658 0 0 0 0
+/phpmyadmin/js/mootools-domready-rainbow.js
+0 1 354 318 0 0 0 0
+/phpmyadmin/themes/original/img/b_print.png
+1 1 0 574 0 0 0 0
+/phpmyadmin/tbl_row_action.php
+0 2 0 4005 0 0 0 0
+/spagna/doc2xml.php
+0 2 0 2769 0 0 0 0
+/js/jquery-ui.min.js
+0 75 0 3165040 0 0 0 0
+/css/DataTables-1.10.10/images/sort_both.png
+1 115 0 19095 0 0 0 0
+/js/datatables.min.js
+0 75 0 4378244 0 0 0 0
+/spagna/etich.php
+0 9 0 1345404 0 0 0 0
+/css/images/ui-bg_glass_100_fdf5ce_1x400.png
+1 12 0 4631 0 0 0 0
+/js/checkbarcode.js
+0 73 0 11880 0 0 0 0
+/krona/schedaartxls.php
+0 2 0 122880 0 1 0 0
+/phpmyadmin/js/mooRainbow/images/moor_boverlay.png
+1 1 0 799 0 0 0 0
+/phpmyadmin/themes/original/img/b_help.png
+1 1 0 229 0 0 0 0
+/phpmyadmin/sql.php
+0 17 0 188590 0 0 0 0
+/krona/etich-porta.php
+0 21 0 1592682 0 5 0 0
+/krona/deldoc.php
+0 33 0 39897 0 0 0 0
+/img/05_edit.gif
+1 88 0 14196 0 0 0 0
+/krona/etich_india_PZ.php
+0 30 0 42025 3 3 0 0
+/css/datatables.min.css
+0 89 0 163008 0 0 0 0
+/css/images/ui-icons_ffffff_256x240.png
+1 14 0 82953 0 0 0 0
+/francia/doc-detail.php
+0 12 0 25642 0 0 0 0
+/krona/art-distbase.php
+0 56 0 128786 0 1 0 0
+/krona/esplodi.php
+0 646 0 2783548 1 27 0 0
+/krona/style.css
+0 1 0 380 0 0 0 0
+/krona/base_xls2doc.php
+0 26 0 117766 0 3 0 0
+/russia/login.php
+0 3 0 3759 2 0 0 0
+/phpmyadmin/themes/original/img/b_sql.png
+1 1 0 322 0 0 0 0
+/phpmyadmin/phpmyadmin.css.php
+0 6 1 21056 0 0 0 0
+/phpmyadmin/themes/original/img/s_replication.png
+1 1 0 447 0 0 0 0
+/germania/import-db.php
+0 994 0 1206290 1 90 0 0
+/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+1 16 0 88320 0 0 0 0
+/phpmyadmin/themes/original/img/b_import.png
+1 1 0 310 0 0 0 0
+/phpmyadmin/themes/original/img/b_drop.png
+1 1 0 311 0 0 0 0
+/phpmyadmin/tbl_structure.php
+0 1 0 7858 0 1 0 0
+/phpmyadmin/js/mooRainbow/images/moor_woverlay.png
+1 1 0 768 0 0 0 0
+/krona/doc2xls.php
+0 41 0 247808 0 7 0 0
+/phpmyadmin/themes/original/img/b_engine.png
+1 1 0 362 0 0 0 0
+/phpmyadmin/themes/original/img/bd_ftext.png
+1 1 0 277 0 0 0 0
+/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+1 56 0 17650 0 0 0 0
+/krona/ddtimportxls.php
+0 31 0 40641 0 0 0 0
+/phpmyadmin/js/mootools-more.js
+0 1 1 50749 0 0 0 0
+/krona/etich1lotti_unificate_SC.php
+0 74 0 12012581 0 6 0 0
+/phpmyadmin/favicon.ico
+0 1 0 18902 0 0 0 0
+/phpmyadmin/themes/original/img/b_browse.png
+1 1 0 265 0 0 0 0
+/francia/login.php
+0 14 0 18928 3 0 0 0
+/phpmyadmin/themes/original/img/s_rights.png
+1 1 0 512 0 0 0 0
+/phpmyadmin/themes/original/img/b_search.png
+1 1 0 605 0 0 0 0
+/phpmyadmin/js/mooRainbow/images/moor_cursor.gif
+1 1 0 80 0 0 0 0
+/phpmyadmin/themes/original/img/b_export.png
+1 1 0 313 0 0 0 0
+/phpmyadmin/themes/original/img/item_ltr.png
+1 1 0 173 0 0 0 0
+/krona/xlsinv_base.php
+0 5 0 75264 0 0 0 0
+/krona/art-detail.php
+0 247 0 1583925 6 3 0 0
+/css/images/ui-bg_glass_65_ffffff_1x400.png
+1 10 0 2520 0 0 0 0
+/phpmyadmin/js/mooRainbow/images/moor_arrows.gif
+1 1 0 94 0 0 0 0
+/phpmyadmin/themes/original/img/s_sync.png
+1 1 0 551 0 0 0 0
+/krona.jpg
+1 1 0 35861 0 0 0 0
+/phpmyadmin/db_structure.php
+0 2 0 42349 0 0 0 0
+/phpmyadmin/themes/original/img/s_tbl.png
+1 1 0 252 0 0 0 0
+/krona/artcons-detail.php
+0 9 0 20527 0 0 0 0
+/krona/menu-inv.php
+0 16 0 21809 1 0 0 0
+/phpmyadmin/js/mooRainbow/mooRainbow.css
+0 1 24 761 0 0 0 0
+# End Of Table - urls
+# -sites- (monthly)
+157.55.39.239
+0 1 1 35861 0 0
+- 0 0
+207.46.13.183
+0 1 0 133 1 1524001717
+- 0 0
+207.46.13.184
+0 2 1 2957 1 1524003746
+/krona/login.php 0 0
+157.55.39.246
+0 1 1 1355 1 1522767221
+- 0 0
+157.55.39.247
+0 1 0 3524 1 1522756053
+- 0 0
+157.55.39.248
+0 4 2 4177 2 1522796020
+- 0 0
+207.46.13.7
+0 1 1 35861 0 0
+- 0 0
+207.46.13.9
+0 10 5 10202 6 1523664802
+- 0 0
+104.236.7.86
+0 1 0 314 1 1522892438
+- 0 0
+103.208.220.139
+0 101 5 128831 1 1523791481
+- 0 0
+41.207.17.230
+0 2 1 3804 1 1522750971
+- 0 0
+207.46.13.190
+0 2 1 2859 1 1523839407
+- 0 0
+207.46.13.191
+0 4 1 3142 3 1523453084
+- 0 0
+207.46.13.196
+0 2 2 68 0 0
+- 0 0
+207.46.13.199
+0 1 1 34 0 0
+- 0 0
+172.82.185.211
+0 1 0 133 1 1523058870
+- 0 0
+52.3.244.172
+0 6 4 4322 2 1522891114
+- 0 0
+46.229.168.65
+0 1 1 1363 1 1522942394
+- 0 0
+46.229.168.69
+0 1 1 34 0 0
+- 0 0
+46.229.168.73
+0 1 1 20 1 1522942411
+- 0 0
+46.229.168.74
+0 3 3 4028 2 1523480470
+- 0 0
+104.131.147.112
+0 1 1 1318 1 1522973341
+- 0 0
+62.99.12.7
+0 20 14 52494 1 1523529600
+- 0 0
+131.253.27.20
+0 2 2 4674 0 0
+- 0 0
+103.255.254.135
+0 1 0 314 1 1522938610
+- 0 0
+185.188.26.169
+0 2 1 2726 1 1523403684
+- 0 0
+34.229.161.222
+0 3 2 2161 1 1523325267
+- 0 0
+40.77.177.52
+0 1 1 1328 0 0
+- 0 0
+211.115.79.122
+0 4 4 13960 4 1523422613
+- 0 0
+31.24.137.100
+0 36 33 343177 1 1523982364
+/krona/menu-inv.php 0 0
+88.15.111.16
+0 53 51 607477 2 1523982484
+/spagna/doc-detail.php 0 0
+131.253.27.46
+0 1 1 35861 0 0
+- 0 0
+54.36.148.213
+0 1 0 809 0 0
+- 0 0
+131.253.27.68
+0 1 1 1328 0 0
+- 0 0
+80.17.43.81
+0 667 630 3410423 30 1523985893
+/krona/askdb.php 0 0
+84.78.19.30
+0 61 52 360728 1 1522753901
+- 0 0
+131.253.27.86
+0 1 1 2959 0 0
+- 0 0
+88.16.15.98
+0 214 190 793487 13 1523905732
+- 0 0
+37.182.228.178
+0 3455 3306 27305857 61 1523989369
+/krona/menu-for.php 0 0
+93.40.209.34
+0 1567 1491 29834484 62 1523899953
+- 0 0
+66.249.93.15
+0 1 1 1318 1 1522751559
+- 0 0
+40.77.167.66
+0 2 1 2726 1 1523961476
+/krona/login.php 0 0
+80.19.227.186
+0 2929 2559 35619923 68 1523985558
+/krona/bollecons.php 0 0
+50.112.194.65
+0 2 1 17545 1 1523706836
+- 0 0
+40.77.167.77
+0 6 4 6771 4 1523167657
+- 0 0
+90.174.3.182
+0 23 22 263614 1 1523965996
+/spagna/doc-detail.php 0 0
+90.174.2.147
+0 9 5 14428 1 1523536804
+- 0 0
+66.249.93.35
+0 1 1 894 0 0
+- 0 0
+40.77.167.81
+0 1 1 34 0 0
+- 0 0
+40.77.179.66
+0 2 2 3043 0 0
+- 0 0
+94.23.1.89
+0 2 0 3612 1 1522556107
+- 0 0
+40.77.167.89
+0 1 1 35861 0 0
+- 0 0
+199.30.25.59
+0 3 3 40535 0 0
+- 0 0
+2.40.150.248
+0 42 40 296527 1 1523611429
+- 0 0
+95.243.64.64
+0 479 452 2108803 28 1523971485
+/krona/getaltcodex.php 0 0
+213.143.48.52
+0 7 6 41090 1 1522925962
+- 0 0
+87.250.224.39
+0 8 5 1349 3 1523520270
+- 0 0
+120.92.11.191
+0 1 1 1318 1 1523189790
+- 0 0
+195.154.166.8
+0 1 0 809 0 0
+- 0 0
+66.249.93.199
+0 1 1 2565 1 1523982409
+/phpmyadmin/ 0 0
+173.239.223.8
+0 1 1 3490 1 1523706955
+- 0 0
+46.229.164.100
+0 1 1 34 0 0
+- 0 0
+46.229.164.102
+0 4 4 136 0 0
+- 0 0
+52.91.148.25
+0 3 2 2161 1 1522554191
+- 0 0
+79.36.196.173
+0 6 6 41995 1 1523975104
+/krona/login.php 0 0
+185.45.12.126
+0 15 0 25710 1 1523791510
+- 0 0
+90.174.2.183
+0 28 26 295362 1 1523618052
+- 0 0
+65.55.210.137
+0 1 1 1328 0 0
+- 0 0
+213.143.61.49
+0 21 20 255304 1 1523357728
+- 0 0
+65.55.210.140
+0 1 1 35861 0 0
+- 0 0
+90.174.3.37
+0 5 5 17067 1 1523443592
+- 0 0
+174.129.55.38
+0 6 4 4322 1 1522980444
+- 0 0
+148.251.7.6
+0 2 2 3504 1 1523338525
+- 0 0
+54.36.149.31
+0 1 0 20 1 1523391845
+- 0 0
+162.210.196.100
+0 8 8 14016 4 1523737588
+- 0 0
+182.118.20.143
+0 1 0 314 1 1522903326
+- 0 0
+106.120.161.68
+0 1 0 314 1 1522899712
+- 0 0
+5.188.203.40
+0 11 0 19866 1 1522629238
+- 0 0
+2.40.150.61
+0 54 52 992133 2 1523434776
+- 0 0
+182.118.20.155
+0 1 0 314 1 1522903325
+- 0 0
+90.174.0.136
+0 5 4 5769 1 1522773491
+- 0 0
+65.55.210.172
+0 1 1 1715 0 0
+- 0 0
+54.236.43.207
+0 3 2 2161 1 1522815770
+- 0 0
+199.30.25.151
+0 1 1 35861 0 0
+- 0 0
+199.30.24.112
+0 1 1 2959 0 0
+- 0 0
+162.210.196.129
+0 4 4 7008 2 1523906680
+- 0 0
+66.102.9.13
+0 1 1 247 0 0
+- 0 0
+66.102.9.16
+0 4 4 13223 1 1523982410
+/phpmyadmin/phpmyadmin.css.php 0 0
+66.102.9.19
+0 1 1 311 0 0
+- 0 0
+90.174.3.74
+0 8 6 18935 1 1523618230
+- 0 0
+2.40.150.82
+0 6 6 41995 1 1522921965
+- 0 0
+2.40.150.83
+0 1 1 1318 1 1522776559
+- 0 0
+85.86.93.34
+0 6 6 39292 1 1523042926
+- 0 0
+162.210.196.97
+0 4 4 7008 2 1523194968
+- 0 0
+40.77.167.5
+0 1 1 1328 0 0
+- 0 0
+40.77.167.9
+0 2 1 3558 1 1523223495
+- 0 0
+151.74.125.50
+0 25 24 311981 1 1523881884
+- 0 0
+86.105.9.170
+0 101 5 169041 1 1523791281
+- 0 0
+213.143.51.63
+0 10 4 12526 1 1523015875
+- 0 0
+199.30.24.133
+0 1 1 2959 0 0
+- 0 0
+88.198.55.175
+0 4 4 7008 2 1523291457
+- 0 0
+207.46.13.201
+0 1 1 34 0 0
+- 0 0
+207.46.13.203
+0 1 1 34 0 0
+- 0 0
+207.46.13.206
+0 2 2 2581 1 1523187858
+- 0 0
+54.197.94.213
+0 3 2 2161 1 1522968703
+- 0 0
+54.172.132.45
+0 3 2 2161 1 1522873086
+- 0 0
+104.131.183.50
+0 1 0 0 1 1522767707
+- 0 0
+35.226.23.240
+0 1 1 34 0 0
+- 0 0
+217.69.143.217
+0 3 1 1836 1 1523880113
+- 0 0
+204.13.201.137
+0 2 2 758 0 0
+- 0 0
+204.13.201.138
+0 5 4 16633 1 1523706650
+- 0 0
+204.13.201.139
+0 2 2 1820 0 0
+- 0 0
+52.200.221.20
+0 2 1 17545 1 1523706806
+- 0 0
+151.99.249.118
+0 120 98 5065901 8 1523965043
+/krona/etich.php 0 0
+85.48.56.183
+0 2 2 2726 1 1523366171
+- 0 0
+204.13.201.140
+0 4 4 2578 0 0
+- 0 0
+199.195.250.77
+0 1 0 14055 1 1523706920
+- 0 0
+80.31.252.244
+0 46 28 323594 1 1522767879
+- 0 0
+199.30.24.178
+0 4 4 39783 0 0
+- 0 0
+5.188.9.80
+0 11 0 19866 1 1522554578
+- 0 0
+90.105.125.252
+0 7 7 48539 1 1522831012
+- 0 0
+213.87.148.87
+0 6 6 41995 1 1522966886
+- 0 0
+80.103.136.218
+0 30 29 284358 1 1523383380
+- 0 0
+91.200.12.86
+0 2 2 2636 2 1523933364
+/krona/login.php 0 0
+206.189.120.212
+0 1 0 314 1 1523826748
+- 0 0
+2.115.99.230
+0 2210 2085 4821121 39 1523975103
+/krona/esplodi.php 0 0
+2.115.99.231
+0 5654 5243 19001061 128 1523993471
+/germania/import-db.php 0 0
+2.115.99.233
+0 1053 883 5487012 47 1523987709
+/krona/etich1_weight.php 0 0
+91.200.12.98
+0 2 0 1618 0 0
+- 0 0
+2.115.99.235
+0 5 5 41101 1 1523019069
+- 0 0
+2.115.99.238
+0 143 130 775798 8 1523983402
+/krona/getdoppiocollox.php 0 0
+82.102.21.98
+0 1 1 3490 1 1523706954
+- 0 0
+207.46.13.12
+0 2 1 3130 1 1523851944
+- 0 0
+69.84.207.246
+0 1 1 3490 1 1523713999
+- 0 0
+104.236.93.10
+0 1 1 14 0 0
+- 0 0
+207.46.13.21
+0 14 7 11277 7 1523846531
+- 0 0
+87.113.96.90
+0 1 0 14055 1 1523706917
+- 0 0
+157.55.39.103
+0 3 2 4876 1 1522631932
+- 0 0
+157.55.39.114
+0 2 2 37216 1 1523535845
+- 0 0
+115.89.123.121
+0 10 0 6738 2 1523818389
+- 0 0
+157.55.39.115
+0 4 1 8894 3 1523535850
+- 0 0
+157.55.39.117
+0 3 1 3006 1 1523535848
+- 0 0
+118.219.252.194
+0 2 1 17545 1 1523707841
+- 0 0
+185.225.208.21
+0 3 0 10572 1 1523791650
+- 0 0
+35.196.249.91
+0 1 1 1318 1 1523695331
+- 0 0
+207.46.13.62
+0 1 0 133 1 1523302635
+- 0 0
+185.225.208.38
+0 201 9 302443 1 1523791199
+- 0 0
+90.174.3.205
+0 8 6 42200 1 1523634348
+- 0 0
+194.187.170.133
+0 2 2 1352 1 1523972591
+/krona/login.php 0 0
+157.55.39.141
+0 4 3 4045 2 1522883754
+- 0 0
+88.47.189.234
+0 35 33 136807 1 1522943824
+- 0 0
+157.55.39.146
+0 13 8 12518 6 1522746845
+- 0 0
+66.249.93.201
+0 1 1 18902 0 0
+- 0 0
+66.249.79.102
+0 2 1 167 1 1523488790
+- 0 0
+220.181.132.194
+0 1 0 133 1 1522903408
+- 0 0
+66.249.79.104
+0 1 1 34 0 0
+- 0 0
+37.145.229.225
+0 1 0 133 1 1523811748
+- 0 0
+207.46.13.97
+0 4 3 4045 2 1523899165
+- 0 0
+157.55.39.160
+0 2 2 71722 0 0
+- 0 0
+120.92.11.224
+0 1 1 1363 1 1523189790
+- 0 0
+69.12.66.213
+0 2 0 628 1 1523481325
+- 0 0
+157.55.39.170
+0 1 1 1355 1 1522944369
+- 0 0
+180.76.15.137
+0 1 1 34 0 0
+- 0 0
+157.55.39.171
+0 9 5 9630 5 1523258029
+- 0 0
+157.55.39.173
+0 1 0 3524 1 1522978275
+- 0 0
+120.92.11.231
+0 1 1 1346 1 1523189790
+- 0 0
+180.76.15.143
+0 1 1 34 0 0
+- 0 0
+131.161.41.34
+0 7 6 41950 1 1523007816
+- 0 0
+157.55.39.1
+0 1 1 34 0 0
+- 0 0
+157.55.39.6
+0 1 1 34 0 0
+- 0 0
+180.76.15.151
+0 1 1 1318 1 1522893626
+- 0 0
+66.249.79.148
+0 3 1 1032 2 1523447522
+- 0 0
+5.196.87.123
+0 4 4 136 0 0
+- 0 0
+66.249.79.150
+0 2 1 1386 2 1523447523
+- 0 0
+54.36.148.102
+0 1 1 1318 1 1523215201
+- 0 0
+90.174.2.237
+0 3 3 8149 1 1523384007
+- 0 0
+199.30.24.67
+0 1 1 1328 0 0
+- 0 0
+107.178.194.85
+0 2 1 4842 1 1523706650
+- 0 0
+121.128.111.37
+0 1 1 1346 1 1522926018
+- 0 0
+66.249.79.99
+0 3 0 399 3 1523499449
+- 0 0
+90.174.2.23
+0 7 7 40655 1 1523529755
+- 0 0
+2.40.151.165
+0 11 10 22164 2 1523972975
+/krona/giornalemaga.php 0 0
+71.6.165.200
+0 4 2 3028 1 1522743876
+- 0 0
+101.199.108.56
+0 1 0 133 1 1522903380
+- 0 0
+199.30.24.98
+0 1 1 35861 0 0
+- 0 0
+213.143.50.223
+0 32 31 310755 1 1522921408
+- 0 0
+5.168.98.239
+0 10 8 10257 1 1522950159
+- 0 0
+2.82.108.81
+0 151 140 505825 10 1523989688
+/spagna/doc-detail.php 0 0
+84.78.16.217
+0 24 23 288871 1 1523016310
+- 0 0
+66.249.66.148
+0 3 0 399 3 1522849861
+- 0 0
+104.207.76.102
+0 1 0 14055 1 1523706917
+- 0 0
+199.58.86.209
+0 2 2 3504 1 1523779569
+- 0 0
+213.152.198.49
+0 4 4 2394 1 1523526446
+- 0 0
+66.249.66.150
+0 2 1 167 1 1522784472
+- 0 0
+80.103.136.10
+0 6 6 39292 1 1523983797
+/spagna/login.php 0 0
+52.27.2.86
+0 2 1 17545 1 1523706838
+- 0 0
+159.65.81.8
+0 1 0 314 1 1524002825
+- 0 0
+207.244.149.106
+0 1 0 809 0 0
+- 0 0
+95.253.65.137
+0 946 870 15930797 37 1523974557
+/krona/doc-detail.php 0 0
+80.81.125.114
+0 39 31 376344 3 1523979644
+/spagna/etich.php 0 0
+52.232.126.115
+0 1 0 314 1 1522585076
+- 0 0
+194.183.77.29
+0 7 7 43313 1 1523376856
+- 0 0
+54.36.148.191
+0 1 0 809 0 0
+- 0 0
+40.77.179.120
+0 1 1 1715 0 0
+- 0 0
+213.152.198.82
+0 506 506 308008 65 1523979646
+/libs/barcodelotto.php 0 0
+2.40.150.183
+0 1 1 1318 1 1523355226
+- 0 0
+178.62.99.175
+0 2 1 4842 1 1523707261
+- 0 0
+2.40.160.137
+0 39 36 315817 1 1523271625
+- 0 0
+108.59.8.70
+0 2 2 3504 1 1523973197
+/krona/login.php 0 0
+163.172.67.146
+0 2 1 167 1 1523708905
+- 0 0
+90.174.2.91
+0 1 1 1363 1 1522678768
+- 0 0
+90.174.2.94
+0 2 1 32885 1 1523287003
+- 0 0
+45.56.81.126
+0 1 0 133 1 1522700943
+- 0 0
+108.59.8.80
+0 2 2 3504 1 1523292695
+- 0 0
+125.71.55.10
+0 1 0 133 1 1523013832
+- 0 0
+80.28.76.3
+0 60 57 2582576 3 1523875510
+- 0 0
+2.40.160.154
+0 4 3 6837 1 1523887352
+- 0 0
+40.77.178.110
+0 1 1 35861 0 0
+- 0 0
+93.40.213.34
+0 235 231 3688604 6 1523980246
+/krona/menu-for.php 0 0
+2.40.160.158
+0 24 23 653495 2 1523555702
+- 0 0
+40.77.167.127
+0 2 0 1541 2 1523708145
+- 0 0
+35.153.52.39
+0 3 2 2161 1 1523064049
+- 0 0
+2.40.160.168
+0 36 35 1281379 2 1522945510
+- 0 0
+66.249.75.136
+0 1 0 133 1 1523508450
+- 0 0
+157.55.39.34
+0 2 1 3558 1 1523104231
+- 0 0
+207.46.13.108
+0 1 0 133 1 1522832131
+- 0 0
+87.17.241.41
+0 1 1 894 0 0
+- 0 0
+207.46.13.113
+0 1 1 35861 0 0
+- 0 0
+46.183.218.72
+0 2 0 3612 1 1523569499
+- 0 0
+46.229.164.99
+0 1 1 34 0 0
+- 0 0
+40.77.167.182
+0 5 5 170 0 0
+- 0 0
+207.46.13.122
+0 5 4 6960 1 1522725112
+- 0 0
+207.46.13.126
+0 1 1 1355 1 1523350091
+- 0 0
+207.46.13.127
+0 3 2 4876 1 1523375428
+- 0 0
+207.46.13.129
+0 3 2 2340 1 1523355629
+- 0 0
+120.92.11.92
+0 1 1 1352 1 1523189790
+- 0 0
+51.15.54.85
+0 35 0 123340 1 1523791650
+- 0 0
+92.23.59.57
+0 2 1 17545 1 1523706954
+- 0 0
+40.77.167.196
+0 3 2 4876 1 1523007388
+- 0 0
+40.77.167.197
+0 5 2 4944 2 1523024501
+- 0 0
+157.55.39.68
+0 1 1 34 0 0
+- 0 0
+157.55.39.69
+0 11 6 10201 6 1523549101
+- 0 0
+207.46.13.132
+0 1 1 1328 0 0
+- 0 0
+40.77.177.149
+0 1 1 2959 0 0
+- 0 0
+93.40.196.67
+0 9 7 2330397 1 1522745922
+- 0 0
+213.119.101.1
+0 6 6 41995 1 1522889991
+- 0 0
+52.91.168.121
+0 3 2 2161 1 1522546163
+- 0 0
+157.55.39.72
+0 1 1 1715 0 0
+- 0 0
+165.227.238.49
+0 1 0 314 1 1523991531
+- 0 0
+207.46.13.144
+0 1 1 35861 0 0
+- 0 0
+207.46.13.145
+0 2 1 4842 1 1523192495
+- 0 0
+46.101.17.20
+0 1 0 314 1 1523977137
+- 0 0
+207.46.13.149
+0 2 2 37216 1 1523363701
+- 0 0
+157.55.39.211
+0 1 1 1328 0 0
+- 0 0
+46.101.94.163
+0 1 1 3490 1 1523706954
+- 0 0
+157.55.39.218
+0 12 9 11734 3 1523839409
+- 0 0
+157.55.39.91
+0 1 1 35861 0 0
+- 0 0
+2.116.162.74
+0 25 16 76785 1 1522948471
+- 0 0
+157.55.39.224
+0 4 2 2902 4 1522978107
+- 0 0
+94.23.20.139
+0 8 0 14448 1 1523626013
+- 0 0
+207.244.149.75
+0 1 0 809 1 1523615146
+- 0 0
+207.46.13.174
+0 1 1 35861 0 0
+- 0 0
+157.55.39.233
+0 3 2 4459 1 1523140645
+- 0 0
+157.55.39.234
+0 1 1 35861 0 0
+- 0 0
+# End Of Table - sites (monthly)
+# -sites- (daily)
+207.46.13.183
+0 1 0 133 1 1524001717
+- 0 0
+207.46.13.184
+0 2 1 2957 1 1524003746
+/krona/login.php 0 0
+31.24.137.100
+0 36 33 343177 1 1523982364
+/krona/menu-inv.php 0 0
+88.15.111.16
+0 25 24 317800 1 1523982484
+/spagna/doc-detail.php 0 0
+80.17.43.81
+0 32 29 75453 2 1523985893
+/krona/askdb.php 0 0
+37.182.228.178
+0 434 410 4905752 4 1523989369
+/krona/menu-for.php 0 0
+40.77.167.66
+0 2 1 2726 1 1523961476
+/krona/login.php 0 0
+80.19.227.186
+0 429 388 4428811 4 1523985558
+/krona/bollecons.php 0 0
+90.174.3.182
+0 23 22 263614 1 1523965996
+/spagna/doc-detail.php 0 0
+95.243.64.64
+0 38 37 203153 3 1523971485
+/krona/getaltcodex.php 0 0
+66.249.93.199
+0 1 1 2565 1 1523982409
+/phpmyadmin/ 0 0
+79.36.196.173
+0 6 6 41995 1 1523975104
+/krona/login.php 0 0
+66.102.9.13
+0 1 1 247 0 0
+- 0 0
+66.102.9.16
+0 4 4 13223 1 1523982410
+/phpmyadmin/phpmyadmin.css.php 0 0
+66.102.9.19
+0 1 1 311 0 0
+- 0 0
+151.99.249.118
+0 7 6 307723 1 1523965043
+/krona/etich.php 0 0
+91.200.12.86
+0 1 1 1318 1 1523933364
+/krona/login.php 0 0
+2.115.99.230
+0 96 90 158393 3 1523975103
+/krona/esplodi.php 0 0
+2.115.99.231
+0 1119 841 4269757 11 1523993471
+/germania/import-db.php 0 0
+2.115.99.233
+0 92 75 301249 7 1523987709
+/krona/etich1_weight.php 0 0
+2.115.99.238
+0 70 65 181653 3 1523983402
+/krona/getdoppiocollox.php 0 0
+194.187.170.133
+0 2 2 1352 1 1523972591
+/krona/login.php 0 0
+66.249.93.201
+0 1 1 18902 0 0
+- 0 0
+5.196.87.123
+0 1 1 34 0 0
+- 0 0
+2.40.151.165
+0 11 10 22164 2 1523972975
+/krona/giornalemaga.php 0 0
+2.82.108.81
+0 33 32 62186 1 1523989688
+/spagna/doc-detail.php 0 0
+80.103.136.10
+0 6 6 39292 1 1523983797
+/spagna/login.php 0 0
+159.65.81.8
+0 1 0 314 1 1524002825
+- 0 0
+95.253.65.137
+0 87 82 1714718 3 1523974557
+/krona/doc-detail.php 0 0
+80.81.125.114
+0 6 5 156816 1 1523979644
+/spagna/etich.php 0 0
+213.152.198.82
+0 50 50 30326 7 1523979646
+/libs/barcodelotto.php 0 0
+108.59.8.70
+0 2 2 3504 1 1523973197
+/krona/login.php 0 0
+93.40.213.34
+0 235 231 3688604 6 1523980246
+/krona/menu-for.php 0 0
+165.227.238.49
+0 1 0 314 1 1523991531
+- 0 0
+46.101.17.20
+0 1 0 314 1 1523977137
+- 0 0
+# End Of Table - sites (daily)
+# -referrers- 
+http://intranet.krona.it/francia/cli-detail.php
+1 49
+http://intranet.krona.it/spagna/cli-detail.php
+1 105
+- (Direct Request)
+0 6803
+http://intranet.krona.it/krona/bollecons.php
+1 119
+http://intranet.krona.it/spagna/rubrica-cli.php
+1 36
+http://intranet.krona.it/wp-content/themes/u-design/style.css
+1 1
+http://intranet.krona.it/
+1 19
+http://intranet.krona.it/css/jquery-ui.min.css
+1 96
+http://intranet.krona.it/spagna/menu-for.php
+1 8
+http://intranet.krona.it/phpmyadmin/phpmyadmin.css.php
+1 9
+http://intranet.krona.it/spagna/ddt-detail.php
+1 2
+http://intranet.krona.it/krona/esplodi.php
+1 475
+http://intranet.krona.it/krona/ksimportxls.php
+1 7
+http://intranet.krona.it/krona/menu-inv.php
+1 16
+http://intranet.krona.it/krona/login.php
+1 1980
+http://intranet.krona.it/krona/artcons-detail.php
+1 22
+http://intranet.krona.it/krona/moddb.php
+1 3
+http://yandex.ru/clck/jsredir
+0 1
+http://www.google.com/search
+0 1
+http://intranet.krona.it/krona/
+1 4
+http://intranet.krona.it/krona/doc-detail.php
+1 389
+http://webcache.googleusercontent.com/search
+0 1
+http://intranet.krona.it/spagna/menu-cli.php
+1 10
+http://127.0.0.1:9788/desktop/login.jsp
+0 1
+http://intranet.krona.it/krona/menu-for.php
+1 1764
+http://intranet.krona.it/francia/login.php
+1 32
+http://www.k-group.com/extera.js
+0 4
+http://intranet.krona.it/krona/okdoc.php
+1 3
+http://intranet.krona.it/wp-content/plugins/Tevolution/tmplconnector/monetize/templatic-custom_fields/css/jquery.lightbox.css
+1 1
+http://intranet.krona.it/krona/rnc.php
+1 7
+http://intranet.krona.it/krona/ddttoload.php
+1 344
+http://intranet.krona.it/phpmyadmin/navigation.php
+1 19
+http://intranet.krona.it/krona/giacArtDetail.php
+1 46
+http://intranet.krona.it/krona/menu-cli.php
+1 3
+http://intranet.krona.it
+1 2
+http://intranet.krona.it/krona/art-detail.php
+1 328
+https://www.google.com.br/
+0 2
+http://intranet.krona.it/krona/giornalemaga.php
+1 254
+http://intranet.krona.it/spagna/ord-cli.php
+1 135
+http://intranet.krona.it/krona/art-doc_list.php
+1 203
+http://intranet.krona.it/krona/inv-list.php
+1 23
+http://intranet.krona.it/phpmyadmin/js/mooRainbow/mooRainbow.css
+1 2
+http://intranet.krona.it/krona/xls2inv.php
+1 1
+http://intranet.krona.it/krona/rnc-make.php
+1 2
+http://www.bing.com
+0 1
+http://intranet.krona.it/phpmyadmin/db_structure.php
+1 17
+http://intranet.krona.it/phpmyadmin/index.php
+1 19
+http://www.k-group.com/
+0 247
+http://intranet.krona.it/krona/cli-detail.php
+1 373
+http://intranet.krona.it/phpmyadmin/tbl_select.php
+1 4
+http://intranet.krona.it/krona/deldoc.php
+1 21
+http://intranet.krona.it/css/datatables.min.css
+1 186
+http://intranet.krona.it/francia/doc-detail.php
+1 35
+http://intranet.krona.it/krona/art-distbase.php
+1 17
+http://intranet.krona.it/russia/login.php
+1 6
+http://intranet.krona.it/spagna/doc-detail.php
+1 75
+http://intranet.krona.it/krona/manualistica-clienti.php
+1 4
+http://intranet.krona.it/krona/base_xls2doc.php
+1 28
+http://intranet.krona.it/spagna/rnc.php
+1 1
+http://intranet.krona.it/krona/rlimportxls.php
+1 39
+http://intranet.krona.it/krona/xls2tbl.php
+1 29
+http://intranet.krona.it/krona/creadoc.php
+1 326
+http://intranet.krona.it/krona/ddtimportxls.php
+1 72
+http://intranet.krona.it/phpmyadmin/tbl_structure.php
+1 5
+http://intranet.krona.it/wp-content/plugins/formcraft/file-upload/server/content/upload.php
+1 1
+http://intranet.krona.it/krona/xls2doc.php
+1 5
+http://intranet.krona.it/krona/index.php
+1 329
+http://127.0.0.1:21314/desktop/login.jsp
+0 2
+http://intranet.krona.it/krona/artcons.php
+1 13
+http://intranet.krona.it/license.txt
+1 1
+http://intranet.krona.it/krona/inv_xls.php
+1 11
+http://www.netcraft.com/survey/
+0 1
+http://intranet.krona.it/francia/etich.php
+1 6
+http://intranet.krona.it/spagna/menu.php
+1 76
+http://intranet.krona.it/spagna/login.php
+1 166
+http://intranet.krona.it/krona/askdb.php
+1 6653
+http://intranet.krona.it/phpmyadmin/sql.php
+1 20
+http://intranet.krona.it/krona/manualistica.php
+1 5
+http://intranet.krona.it/francia/menu-for.php
+1 12
+http://intranet.krona.it/phpmyadmin/main.php
+1 26
+http://intranet.krona.it/phpmyadmin/tbl_row_action.php
+1 4
+http://intranet.krona.it/wp-content/plugins/font-uploader/readme.txt
+1 1
+http://intranet.krona.it/krona/artcons-rett.php
+1 1
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safa
+0 11
+Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)
+0 1
+Python-urllib/2.7
+0 2
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; WOW64; Trident/5.0)
+0 11
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36
+0 415
+Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Kubuntu)
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+0 46
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Sa
+0 37
+Mozilla/5.0 (Linux; Android 7.0; SM-G920F Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Sa
+0 12
+Mozilla/5.0 (iPad; CPU OS 11_2_5 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) CriOS/65.0.3325.152 Mobile/15D60 Saf
+0 1
+Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+0 8
+Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .
+0 13
+Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.9.0.10) Gecko/2009042316 Firefox/3.0.10
+0 120
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+0 949
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.1
+0 537
+Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 5.1; WIN32
+0 1
+Mozilla/5.0 (compatible; MJ12bot/v1.4.7; http://www.majestic12.co.uk/bot.php?+)
+0 4
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+0 2503
+python-requests/2.13.0
+0 35
+Mozilla 5.0
+0 2
+Riddler (http://riddler.io/about)
+0 2
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+0 7
+Mozilla/5.0 (Android 7.0; Mobile; rv:59.0) Gecko/59.0 Firefox/59.0
+0 113
+Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)
+0 28
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36
+0 13
+Mozilla/5.0 (X11; Linux x86_64; rv:18.0) Gecko/20100101 Firefox/18.0
+0 3
+AHC/1.0
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0
+0 3
+Mozilla/5.0 (Android 7.0; Mobile; rv:59.0.2) Gecko/59.0.2 Firefox/59.0.2
+0 3
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; WOW64; Trident/5.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.5.30729; InfoPat
+0 49
+Mozilla/5.0 (Windows NT 6.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0
+0 180
+Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+0 3167
+Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt; DTS Agent
+0 2
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36Connect Us
+0 4
+Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safa
+0 1
+NYU Internet Census (https://scan.lol; research@scan.lol)
+0 22
+Mozilla/5.0 (Linux; Android 4.4.4; T1-A21L model-orange Build/HuaweiMediaPad) AppleWebKit/537.36 (KHTML, like Gecko) Version/
+0 57
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+0 7
+Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+0 14
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+0 1076
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
+0 1
+Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile S
+0 3
+Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20150101 Firefox/47.0 (Chrome)
+0 2
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Web Preview) Chrome/41.0.2272.118 Safari/537.36
+0 6
+Mozilla/5.0 (compatible; AhrefsBot/5.2; +http://ahrefs.com/robot/)
+0 8
+Mozilla/5.0 (compatible; Qwantify/2.4w; +https://www.qwant.com/)/2.4w
+0 2
+Mozilla/5.0 (compatible; SemrushBot/2~bl; +http://www.semrush.com/bot.html)
+0 2
+Mozilla/4.0 (compatible; Netcraft Web Server Survey)
+0 1
+Mozilla/5.0 (Windows NT 6.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0
+0 504
+Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile S
+0 4
+Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+0 324
+Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5 Build/MRA58N) AppleWebKit/537.36(KHTML, like Gecko) Chrome/61.0.3116.0 Mobile Safa
+0 2
+Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299
+0 5
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_6 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0 Mobile/15D100 S
+0 27
+LightspeedSystemsCrawler Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US
+0 1
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7
+0 1
+Microsoft Windows Network Diagnostics
+0 1
+Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US) AppEngine-Google; (+http://code.google.com/appengine; appid: s~viru
+0 2
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36
+0 1207
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+0 1008
+Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; SLCC1; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36
+0 5
+Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko
+0 3
+Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2
+0 2
+Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
+0 176
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152
+0 1
+Mozilla/5.0 (Windows NT 6.0; rv:52.0) Gecko/20100101 Firefox/52.0
+0 99
+Mozilla/5.0 (compatible; Gluten Free Crawler/1.0; +http://glutenfreepleasure.com/)
+0 1
+MauiBot (crawler.feedback+wc@gmail.com)
+0 33
+python-requests/2.10.0
+0 11
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+0 5
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.3
+0 4
+ltx71 - (http://ltx71.com/)
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b
+0 25
+Mozilla/5.0 (Windows; U; Windows NT 5.1; pt-PT; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 (.NET CLR 3.5.30729)
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+0 3318
+Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+0 780
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1
+0 1
+Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)
+0 1
+Mozilla/5.0 (Linux; Android 4.4.4; T1-A21L Build/HuaweiMediaPad) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33
+0 3
+Mozilla/5.0 (Windows; U; Windows NT 6.1; it; rv:1.9.2.19pre) Gecko/20110902 Prism zdesktop/7.2.5
+0 3
+Mozilla/5.0 (Linux; U; Android 5.0.2; zh-CN; Redmi Note 3 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 OP
+0 2
+Mozilla/5.0 (compatible; SemrushBot/1.2~bl; +http://www.semrush.com/bot.html)
+0 10
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+0 12
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; InfoPath.2)
+0 2
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36 Google Favicon
+0 4
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+0 68
+Wget/1.11.4
+0 4501
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames
