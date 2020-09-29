@@ -7,6 +7,7 @@
 /*                                                                      */
 /************************************************************************/
 include("header.php");
-$baselogo = "../img/loghi/LOGO-KRONA.JPG";
+$baselogo = "../img/loghi/LOGO-KRONA-FR.JPG";
+$ditta="FR";
 include("../libs/etich_common1.php");
 ?>

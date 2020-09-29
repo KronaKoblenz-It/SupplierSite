@@ -78,7 +78,7 @@ if ('' == $cDesc) {
 }
 
 $numpack = 0;
-$Query = "SELECT QTACONF, U_CE, UNMISURA1, FATT1, UNMISURA2, FATT2, UNMISURA3, FATT3, U_PEFC FROM MAGART WHERE CODICE = '".$cCodice."'";
+$Query = "SELECT QTACONF, U_CE, UNMISURA1, FATT1, UNMISURA2, FATT2, UNMISURA3, FATT3, U_PEFC, U_MADEIN, U_COF FROM MAGART WHERE CODICE = '".$cCodice."'";
 $queryexe = db_query($conn, $Query) or die(mysql_error());
 $row = mysql_fetch_object($queryexe);
 if ($cUMPr.trim() == 'CF') {
@@ -108,6 +108,8 @@ if ($numpack == 0) {
 }
 $lCE = $row->U_CE;
 $lPEFC = $row->U_PEFC;
+$lMadeIn = $row->U_MADEIN;
+$lCOF = $row->U_COF;
 
 if ('' == $code) {
     if ($cUMPr.trim() == 'CF' || $numpack == 1) {
@@ -330,10 +332,26 @@ if ($lCE == true) {
 // -------------------------------------------------- //
 //                      LOGO PEFC
 // -------------------------------------------------- //
-if ($lPEFC == true) {
-    $pdf->SetFont('Arial', 'B', '8');
-    $pdf->Text(20, 78, '100% PEFC Certified-ICILA-PEFC COC-002700');
-    $pdf->Image('../img/loghi/LOGO-PEFC.JPG', 135, 2, 49);
+if($lPEFC == true) {
+	$pdf->SetFont('Arial','B','6');
+	$pdf->Text(20,75,"100% PEFC Certified-ICILA-PEFC COC-002700");
+	$pdf->Image("../img/loghi/LOGO-PEFC.JPG", 135, 2, 49 );
+}
+
+// -------------------------------------------------- //
+//                      MADE IN ITALY
+// -------------------------------------------------- //
+if($lMadeIn == true) {
+	$pdf->SetFont('Arial','B','6');
+	$pdf->Text(20,82,"Made in Italy");
+}
+
+// -------------------------------------------------- //
+//                      Country of origin
+// -------------------------------------------------- //
+if($lCOF == true) {
+	$pdf->SetFont('Arial','B','6');
+	$pdf->Text(73,82,"Country of origin: Italy");
 }
 
 // -------------------------------------------------- //
@@ -356,7 +374,7 @@ $pdf->SetFont('Arial', 'B', '6');
 // -------------------------------------------------- //
 
 $pdf->SetFont('Arial', '', '8');
-    $pdf->Text(9, 70, ucfirst(strtolower($cDesc)));
+    $pdf->Text(9, 68, ucfirst(strtolower($cDesc)));
 //      $pdf->SetXY(0, 60);
 //      $pdf->MultiCell(160,2, $cDesc, 0, 'L');
 

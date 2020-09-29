@@ -8,7 +8,7 @@ include("db-utils.php");
 /* CASASOFT ArcaWeb                               		        */
 /* ===========================                                          */
 /*                                                                      */
-/* Copyright (c) 2003-2013 by Roberto Ceccarelli                        */
+/* Copyright (c) 2003-2019 by Roberto Ceccarelli                        */
 /*                                                                      */
 /************************************************************************/
 $conn = db_connect($dbase);
@@ -74,7 +74,7 @@ if($row->CODARTFOR != ""){
 	$cCodiceR = $cCodice;
 }
 
-$Query = "SELECT DESCRIZION, NOTE, QTACONF, UNMISURA FROM MAGART WHERE CODICE = \"$cCodice\"";
+$Query = "SELECT DESCRIZION, NOTE, QTACONF, UNMISURA, U_ARTCOLLO FROM MAGART WHERE CODICE = \"$cCodice\"";
 $queryexe = db_query($conn, $Query) or die(mysql_error());
 $row = mysql_fetch_object($queryexe);
 if("" == $cDesc) {
@@ -83,6 +83,7 @@ if("" == $cDesc) {
 $cNote = $row->NOTE;
 $nQtaconf = ($row->QTACONF == 0 ? 1 : $row->QTACONF);
 $cUM = ($row->UNMISURA == "PZ" ? "Pc" : ($row->UNMISURA == "CF" ? "Set" : $row->UNMISURA) );
+$cArtCollo = $row->U_ARTCOLLO;
 
 if("" == $code) {
 	$Query = "SELECT ALIAS FROM MAGALIAS WHERE IDPROG = 7 AND CODICEARTI = \"$cCodice\"";
@@ -140,7 +141,7 @@ if($pathlogo != "../img/loghi/LOGO-KRONA.JPG"){
 }
 
 $numpack = 0;
-$Query = "SELECT QTACONF, U_CE, UNMISURA1, FATT1, UNMISURA2, FATT2, UNMISURA3, FATT3, U_PEFC FROM MAGART WHERE CODICE = '" . $cCodice . "'";
+$Query = "SELECT QTACONF, U_CE, UNMISURA1, FATT1, UNMISURA2, FATT2, UNMISURA3, FATT3, U_PEFC, U_COF FROM MAGART WHERE CODICE = '" . $cCodice . "'";
 $queryexe = db_query($conn, $Query) or die(mysql_error());
 $row = mysql_fetch_object($queryexe);
 if($cUM.trim() == "Set") {
@@ -167,6 +168,7 @@ if($cUM.trim() == "Set") {
 	// }
 }
 $lCE = $row->U_CE;
+$lCOF = $row->U_COF;
 
 $fontSize = 9;
 $marge    = 2;   // between barcode and hri in pixel
@@ -241,7 +243,12 @@ if($numpack != 0){
   } else {
   	$pdf->Text(55, 145, $cCodiceAlt);
   }
-
+  if ($cArtCollo != "") {
+	$cComposed = "Composed by " . ($cCodiceAlt == "" ? $cCodiceR : $cCodiceAlt) . " and $cArtCollo";
+	$pdf->SetFont('Arial','B','7');
+	$pdf->Text(10, 153, $cComposed); 
+  }	
+	
   $pdf->SetFont('Arial','B','6');
   $pdf->Text(160, 145, "Quantity:");
   $pdf->SetFont('Arial','B','9');
@@ -269,9 +276,11 @@ if($numpack != 0){
 	$pdf->Image($rupiaimg, 220, 183, 5);
 	$pdf->Text(235, 190, $prezzo_str );
   }
-  $pdf->SetFont('Arial','B','6');
-  $pdf->Text(10, 200, "Country of origin: Italy");
-
+  
+  if($lCOF == true) {
+	  $pdf->SetFont('Arial','B','6');
+	  $pdf->Text(10, 200, "Country of origin: Italy");
+  }
   
   $pdf->SetFont('Arial','B','6');
   $pdf->Text(10, 160, "Description:");

@@ -10,7 +10,7 @@ $cookie = preg_split("/\|/",$_SESSION['CodiceAgente']);
 /* CASASOFT ArcaWeb                               		        */
 /* ===========================                                          */
 /*                                                                      */
-/* Copyright (c) 2003-2012 by Roberto Ceccarelli                        */
+/* Copyright (c) 2003-2019 by Roberto Ceccarelli                        */
 /*                                                                      */
 /************************************************************************/
 $conn = db_connect($dbase);
@@ -129,12 +129,14 @@ if($pathlogo != "../img/loghi/LOGO-KRONA.JPG"){
 }
 
 $numpack = 0;
-$Query = "SELECT QTACONF, U_CE, U_PEFC FROM MAGART WHERE CODICE = '" . $cCodice . "'";
+$Query = "SELECT QTACONF, U_CE, U_PEFC, U_MADEIN, U_COF FROM MAGART WHERE CODICE = '" . $cCodice . "'";
 $queryexe = db_query($conn, $Query) or die(mysql_error());
 $row = mysql_fetch_object($queryexe);
 $numpack = 1;
 $lCE = $row->U_CE;
 $lPEFC = $row->U_PEFC;
+$lMadeIn = $row->U_MADEIN;
+$lCOF = $row->U_COF;
 
 
 $fontSize = 9;
@@ -310,9 +312,25 @@ if($lCE == true) {
 //                      LOGO PEFC
 // -------------------------------------------------- //
 if($lPEFC == true) {
-	$pdf->SetFont('Arial','B','8');
-	$pdf->Text(20,78,"100% PEFC Certified-ICILA-PEFC COC-002700");
+	$pdf->SetFont('Arial','B','6');
+	$pdf->Text(20,75,"100% PEFC Certified-ICILA-PEFC COC-002700");
 	$pdf->Image("../img/loghi/LOGO-PEFC.JPG", 135, 2, 49 );
+}
+
+// -------------------------------------------------- //
+//                      MADE IN ITALY
+// -------------------------------------------------- //
+if($lMadeIn == true) {
+	$pdf->SetFont('Arial','B','6');
+	$pdf->Text(20,82,"Made in Italy");
+}
+
+// -------------------------------------------------- //
+//                      Country of origin
+// -------------------------------------------------- //
+if($lCOF == true) {
+	$pdf->SetFont('Arial','B','6');
+	$pdf->Text(73,82,"Country of origin: Italy");
 }
 
 // -------------------------------------------------- //
@@ -333,7 +351,7 @@ $pdf->Text(200, 94, $numpack);
 // -------------------------------------------------- //
 
 $pdf->SetFont('Arial','','8');
-$pdf->Text(9,70,$cDesc);
+$pdf->Text(9,68,$cDesc);
 //      $pdf->SetXY(0, 60);
 //      $pdf->MultiCell(160,2, $cDesc, 0, 'L');
 

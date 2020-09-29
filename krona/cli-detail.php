@@ -64,9 +64,10 @@ print("</tr>\n</thead>\n<tbody>\n");
 
 //SQL query  
 $Query = "SELECT DATADOC,ID,NUMRIGHEPR,DATACONSEG,NUMERODOC,TIPODOC FROM DOCTES WHERE CODICECF = '$codcf' AND TIPODOC IN " ;
-$Query .= ("F01021" == $codcf ? "('CP', 'OI', 'GC')" : "('OC', 'FO', 'LO', 'OF', 'OL', 'EC', 'EQ', 'XC', 'TR')");
+$Query .= ("F01021" == $codcf ? "('CP', 'OI', 'GC')" : "('OC', 'FO', 'LO', 'OF', 'OL', 'EC', 'EQ', 'XC', 'TR', 'OM', 'OW', 'MO', 'WO')");
 $Query .= " ORDER BY DATADOC DESC";
 
+//print($Query);
 //execute query 
 $queryexe = db_query($connectionstring, $Query) or die(mysql_error()); 
 

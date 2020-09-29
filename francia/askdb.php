@@ -112,7 +112,7 @@ var listaRif = function(cCodCF, cCodArt)  {
     setCliente();
 };
 
-var writeEtich = function(link) {
+var writeEtich = function(link, mode) {
 	var idField = document.getElementById("rif");
 	var id = idField.options[idField.selectedIndex].value;
 	var url = "getaltcodex.php?id=" + id;
@@ -134,7 +134,7 @@ var writeEtich = function(link) {
     }
 
 	var lotto = document.getElementById("lotto").value;
-	window.open(link+"?art="+encodeURIComponent(articolo)+"&lotto="+encodeURIComponent(lotto)+"&desc="+encodeURIComponent(desc)+"&code="+encodeURIComponent(barcode)+"&cliven="+encodeURIComponent(cliven) );
+	window.open(link+"?art="+encodeURIComponent(articolo)+"&mode="+mode+"&lotto="+encodeURIComponent(lotto)+"&desc="+encodeURIComponent(desc)+"&code="+encodeURIComponent(barcode)+"&cliven="+encodeURIComponent(cliven) );
 };
 
 var setCliente = function(){
@@ -198,7 +198,7 @@ $connectionstring = db_connect($dbase);
 
 session_start();
 $cookie = preg_split("/\|/",$_SESSION['CodiceAgente']);
-banner("Reso conto lavoro da ",$cookie[1]);
+banner("Stampa Etichette Produzione da ",$cookie[1]);
 $codcf = $cookie[0];
 
 print("<form action=\"esplodi.php\" method=\"get\" >\n");
@@ -230,35 +230,35 @@ print("</select></td></tr>\n");
 print("<tr><td>Cliente</td><td><input type='text' name='cliente' id='cliente' readonly></td></tr>");
 
 print("<tr><td>Lotto</td><td><input type=\"text\" name=\"lotto\" id=\"lotto\" onblur=\"checkBarcode39(this);\" >\n");
-writeEtich("etich1lotti_unificate_PZ.php", "Etichetta 88x36 PZ", "", false);
-writeEtich("etich1lotti_unificate_SC.php", "Etichetta 88x36 SC", "", false);
-writeEtich("etich1lotti_unificate.php", "Etichetta 88x36 CF", "", false);
+writeEtich("etich.php", "Etichetta 88x36 PZ", "", false, "PZ");
+writeEtich("etich.php", "Etichetta 88x36 SC", "", false, "SC");
+writeEtich("etich.php", "Etichetta 88x36 CF", "", false, "CF");
 //writeEtich("etich1lotti.php", "Etichetta 88x36");
-writeEtich("eticha4lotti.php", "Etichette su A4", "", false);
-writeEtich("etich1lotti_unificate_PZ_collo2.php", "Etichetta 88x36 PZ - Collo Supplementare", "etich2collo", true);
+writeEtich("eticha4lotti.php", "Etichette su A4", "", false, "");
+writeEtich("etich1lotti_unificate_PZ_collo2.php", "Etichetta 88x36 PZ - Collo Supplementare", "etich2collo", true, "");
 
 print("</td></tr>\n");
 print("<tr><td>Quantit&agrave</td><td><input type=\"text\" name=\"quantita\" id=\"quantita\" onblur='checkQuantita()'><label id='labelquantita' style='color: red; font-style: italic; visibility: hidden'>     Attenzione!!!. Le quantit&agrave inserite superano del 10% il residuo dell'ordine selezionato. Correggere le quantit&agrave o selezionare un altro ordine.</label></td></tr>\n");
 print("<tr><td>Residuo</td><td><input type=\"text\" name=\"residuo\" id=\"residuo\" readonly></td></tr>\n");
-print("<tr><td>Numero bolla</td><td><input type=\"text\" name=\"numero\" id=\"numero\" ></td></tr>\n");
+//print("<tr><td>Numero bolla</td><td><input type=\"text\" name=\"numero\" id=\"numero\" ></td></tr>\n");
 
-print("<tr><td>Copia lotti da</td>\n");
-print("<td><select name=\"copy\" id=\"copy\" >\n");
-print("<option value=\"\">&nbsp;</option>\n");
-print("</select></td></tr>\n");
+//print("<tr><td>Copia lotti da</td>\n");
+//print("<td><select name=\"copy\" id=\"copy\" >\n");
+//print("<option value=\"\">&nbsp;</option>\n");
+//print("</select></td></tr>\n");
 
 print("</table>\n");
 print("<input type='text' name='codcli' id='codcli' readonly hidden='hidden'></td></tr>");
-print("<input type=\"submit\" id=\"btnok\" value=\"Ok\" >\n");
+//print("<input type=\"submit\" id=\"btnok\" value=\"Ok\" >\n");
 print("</form>\n");
 
 print ("<br>\n");
 goMain();
 footer();
 
-function writeEtich($link, $desc, $id, $hidden) {
+function writeEtich($link, $desc, $id, $hidden, $mode) {
     if($hidden==false){
-	    print("&nbsp;<a href=\"javascript:writeEtich('$link');\" title=\"$desc\" id='$id'>");
+	    print("&nbsp;<a href=\"javascript:writeEtich('$link', '$mode');\" title=\"$desc\" id='$id'>");
     }
     else{
         print("&nbsp;<a href=\"javascript:writeEtich('$link');\" title=\"$desc\" id='$id' style='visibility: hidden'>");

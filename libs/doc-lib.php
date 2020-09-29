@@ -3,7 +3,7 @@
 /* CASASOFT ArcaWeb                               		       			*/
 /* ===========================                                          */
 /*                                                                      */
-/* Copyright (c) 2003-2016 by Roberto Ceccarelli                        */
+/* Copyright (c) 2003-2019 by Roberto Ceccarelli                        */
 /*                                                                      */
 /************************************************************************/
 
@@ -53,7 +53,7 @@ function doc_rows($id, $connectionstring, $compAllowed = true) {
   $queryexe = db_query($connectionstring, $Query);
   $row = db_fetch_row($queryexe);
 
-  $isOF = in_array($row[0], array("FO", "LO", "OF", "OL", "OI", "GC", "OM"));
+  $isOF = in_array($row[0], array("FO", "LO", "OF", "OL", "OI", "GC", "OM", "OW", "MO", "WO"));
   $isBollaCL = in_array($row[0], array("BT", "CE", "RL", "TL", "CP", "BC"));
   $isOrd = ( $isOF or $row[0] == "OC");
 
@@ -111,10 +111,11 @@ function doc_rows($id, $connectionstring, $compAllowed = true) {
   	du_th("88x36 SC");
     du_th("88x36 PZ");
   	if($isIndia) {
-  		du_th("INDIA PZ");
+  	  du_th("INDIA PZ");
       du_th("INDIA CF");
       du_th("INDIA SC");
-  	}
+      du_th("INDIA 2nd Collo");
+ 	}
 	if($isCliPorta) {
 		du_th("Cli. PORTA");
   	}
@@ -238,6 +239,11 @@ function doc_rows($id, $connectionstring, $compAllowed = true) {
 				print("<td class=\"list\" style=\"text-align: center;\">&nbsp;</td>\n");
 				print("<td class=\"list\" style=\"text-align: center;\">&nbsp;</td>\n");
 			 }
+			if($isCollo2 && ($row->U_NCOLLI > 1)) {
+				print_label("etich_india_collo2.php", "110x73 Etich INDIA 2collo", $row->CODICEARTI, $row->LOTTO, $row->DESCRIZION, $barcode, $row->U_CLIVEN, $row->U_DESTCLI, $row->DATACONSEG);
+			} else {
+				print("<td class=\"list\" style=\"text-align: center;\">&nbsp;</td>\n");
+			}
 		}
 		if($row->U_CLIVEN == "C02068") {
 			// Etichette Porta
@@ -330,13 +336,16 @@ function doc_rows($id, $connectionstring, $compAllowed = true) {
 function doc_ddt($id_testa,$connectionstring) {
   global $lang, $str_evasocon, $str_dataddt, $str_numero, $str_colli, $str_peso, $str_sped, $str_telefono;
 
-  $Query = "SELECT DISTINCT DOCTES.DATADOC, DOCTES.NUMERODOC, VETTORI.DESCRIZION, DOCTES.ID, ";
-    $Query = $Query . "DOCTES.DATADOCFOR, DOCTES.NUMERODOCF, ";
-    $Query = $Query . "VETTORI.TELEFONO, DOCTES.COLLI, DOCTES.PESOLORDO, DOCTES.TIPODOC ";
-    $Query = $Query . "FROM DOCTES INNER JOIN DOCRIG ON DOCTES.ID = DOCRIG.ID_TESTA ";
-    $Query = $Query . "LEFT OUTER JOIN VETTORI ON DOCTES.VETTORE1 = VETTORI.CODICE ";
-    $Query = $Query . "WHERE DOCRIG.RIFFROMT = $id_testa ";
-    $Query = $Query . "AND DOCTES.TIPODOC != \"PL\" ";
+  $Query =  <<<EOT
+SELECT DISTINCT DOCTES.DATADOC, DOCTES.NUMERODOC, VETTORI.DESCRIZION, DOCTES.ID, 
+DOCTES.DATADOCFOR, DOCTES.NUMERODOCF, 
+VETTORI.TELEFONO, DOCTES.COLLI, DOCTES.PESOLORDO, DOCTES.TIPODOC 
+,DOCTES.VETTORE1, DOCTES.PATRASF AS TRACKING
+FROM DOCTES INNER JOIN DOCRIG ON DOCTES.ID = DOCRIG.ID_TESTA 
+LEFT OUTER JOIN VETTORI ON DOCTES.VETTORE1 = VETTORI.CODICE 
+WHERE DOCRIG.RIFFROMT = $id_testa 
+AND DOCTES.TIPODOC != 'PL'
+EOT;
   $queryexe = db_query($connectionstring, $Query) or die(mysql_error());
 
   print("<br>\n<h3 class=\"name\" style=\"text-align: center;\">" . $str_evasocon[$lang] . "</h3>\n");
@@ -347,30 +356,52 @@ function doc_ddt($id_testa,$connectionstring) {
   du_th($str_peso[$lang]);
   du_th($str_sped[$lang]);
   du_th($str_telefono[$lang]);
+  du_th("&nbsp;");
+
   print("</tr>\n");
 
   $ut = userType();
 
   //query database
-  while($row = db_fetch_row($queryexe)) {
-    $name = format_date($ut == "F" ? $row[4] : $row[0]);
-    $addr = ($ut == "F" ? $row[5] : $row[1]);
-    $stato = $row[2];
-    $id = $row[3];
-    $telefono = $row[6];
-    $colli = $row[7];
-    $peso = $row[8];
-	  $tipodoc = $row[9];
+  while($row = mysql_fetch_object($queryexe)) {
+    $data = format_date($ut == "F" ? $row->DATADOCFOR : $row->DATADOC);
+    $numero = ($ut == "F" ? $row->NUMERODOCF : $row->NUMERODOC);
+    $vettore = $row->DESCRIZION;
+    $id = $row->ID;
+    $telefono = $row->TELEFONO;
+    $colli = $row->COLLI;
+    $peso = $row->PESO;
+	$tipodoc = $row->TIPODOC;
+
+	$tracking = "&nbsp;";
+	// gestione tracking
+	$id_collo = trim($row->TRACKING);
+	if($dbase == "krona" && $ut != "F" && $id_collo != "") {
+		switch (trim($row->VETTORE1)) {
+			case "10":
+				// Bartolini
+				$tracking="<a target=\"_blank\" href=\"https://vas.brt.it/vas/sped_det_show.hsm?referer=sped_numspe_par.htm&ChiSono=$id_collo&ClienteMittente=&DataInizio=&DataFine=&RicercaChiSono=Ricerca\">Tracking</a>";
+				break;
+			case "Z01":
+				// GLS
+				$tracking="<a target=\"_blank\" href=\"https://www.gls-italy.com/?option=com_gls&view=track_e_trace&mode=search&numero_spedizione=$id_collo&tipo_codice=id_collo\">Tracking</a>";
+				break;
+		}  
+	}
 
     //format results
     du_tr();
-    print ("<td class=\"list\"><a href=\"ddt-detail.php?id=" . $row[3] . "\" >$name</a></td>\n");
-    print ("<td class=\"list\">$tipodoc $addr</td>\n");
-    print ("<td class=\"list\" style=\"text-align: right;\">$colli</td>\n");
-    print ("<td class=\"list\" style=\"text-align: right;\">$peso</td>\n");
-    print ("<td class=\"list\">$stato</td>\n");
-    print ("<td class=\"list\">$telefono</td>\n");
-    print ("</tr>\n");
+	$text = <<<EOT
+<td class="list"><a href="ddt-detail.php?id=$id" >$data</a></td>
+<td class="list">$tipodoc $numero</td>
+<td class="list" style="text-align: right;">$colli</td>
+<td class="list" style="text-align: right;">$peso</td>
+<td class="list">$vettore</td>
+<td class="list">$telefono</td>
+<td class="list">$tracking</td>
+</tr>\n");
+EOT;
+	print("$text\n");
   }
 
   print ("</table>\n");

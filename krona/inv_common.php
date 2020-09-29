@@ -8,7 +8,7 @@
 /* 																		*/
 /************************************************************************/
 
-$anno = 2018;
+$anno = 2019;
 $fornitore = $cookie[0];
 define("UPLOAD_DIR", "./inv_dic_$anno/$fornitore/");
 $mode = trim($_GET['mode']);

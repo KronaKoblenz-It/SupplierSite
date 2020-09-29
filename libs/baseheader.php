@@ -260,4 +260,33 @@ $inc
 </script>
 EOT;
 }
+
+// Funzioni riportate dalla gestione pistole
+// Script per l'impostazione del focus
+function setFocus($id) {
+	print("<script type=\"text/javascript\">\n");
+	print("//<![CDATA[\n");
+	print("document.getElementById(\"$id\").focus();\n");
+	print("//]]>\n");
+	print("</script>\n");
+}
+
+// Script per disabilitare il CR
+function disableCR() {
+	print("<script type=\"text/javascript\">\n");
+	print("//<![CDATA[\n");
+	//print("document.onkeypress = stopRKey;\n");
+	print("document.onkeypress = stopRKey;\n");
+	print("//]]>\n");
+	print("</script>\n");
+}
+
+// Prepara il footer da mettere in coda alle pagine
+function footer_pistole() {
+echo "<div class=\"footmsg\"><center>\n";
+echo "<hr size=\"1\">\n";
+echo "&copy; 2010-" . current_year() . " Krona Koblenz Spa<br/>\n";
+echo "</center></div>\n";
+echo "</body>\n</html>\n";
+}
 ?>

@@ -71,7 +71,7 @@ print("</tr>\n</thead>\n<tbody>\n");
 //SQL query  
 $Query = "SELECT ID,DATADOC,DATACONSEG,NUMERODOC,TIPODOC,NUMERORIGA,QUANTITA,QUANTITARE FROM DOCRIG ";
 $Query .= "WHERE CODICECF = \"$codcf\" AND CODICEARTI = \"$art\" AND UNMISURA = \"$um\" AND " ;
-$Query .= ("F01021" == $codcf ? "(TIPODOC=\"CP\" or TIPODOC=\"OI\")" : "(TIPODOC=\"OC\" or TIPODOC=\"FO\" or TIPODOC=\"LO\" or TIPODOC=\"OF\" or TIPODOC=\"OL\")");
+$Query .= ("F01021" == $codcf ? "(TIPODOC=\"CP\" or TIPODOC=\"OI\")" : "(TIPODOC=\"OC\" or TIPODOC=\"FO\" or TIPODOC=\"LO\" or TIPODOC=\"OF\" or TIPODOC=\"OL\" or TIPODOC=\"OW\" or TIPODOC=\"OM\" or TIPODOC=\"WO\" or TIPODOC=\"MO\")");
 $Query .= " ORDER BY DATADOC DESC";
 
 //execute query 

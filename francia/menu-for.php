@@ -26,7 +26,7 @@ if("F01021" == $cookie[0]) {
 }
 print("</tr>\n");
 print("<tr class=\"list\">\n");
-print("<th class=\"menu\"><a href=\"askdb.php\">Inserimento bolla</a></th>\n");
+print("<th class=\"menu\"><a href=\"askdb.php\">Stampa Etichette Produzione</a></th>\n");
 print("</tr>\n");
 print("<tr class=\"list\">\n");
 print("<th class=\"menu\"><a href=\"ddttoload.php\">Bolle in attesa di acquisizione</a></th>\n");

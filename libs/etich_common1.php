@@ -8,7 +8,7 @@ $cookie = preg_split("/\|/",$_SESSION['CodiceAgente']);
 /* CASASOFT ArcaWeb                               		        		*/
 /* ===========================                                          */
 /*                                                                      */
-/* Copyright (c) 2003-2017 by Roberto Ceccarelli                        */
+/* Copyright (c) 2003-2019 by Roberto Ceccarelli                        */
 /*                                                                      */
 /************************************************************************/
 $conn = db_connect($dbase); 
@@ -19,6 +19,11 @@ $cDesc = (isset($_GET['desc']) ? $_GET['desc'] : "");
 $code = (isset($_GET['code']) ? trim($_GET['code']) : "");
 $cliven = (isset($_GET['cliven']) ? trim($_GET['cliven']) : "");
 $mode = (isset($_GET['mode']) ? $_GET['mode'] : "CF");
+
+if(!$ditta){
+	$ditta = (isset($_GET['ditta']) ? $_GET['ditta'] : "");
+}
+
 
 $dataStampa = date("d/m/Y", time());
 $codForn = $cookie[0];
@@ -290,9 +295,15 @@ if($lCE == true) {
 //                      LOGO PEFC
 // -------------------------------------------------- //
 if($lPEFC == true) {
-	$pdf->SetFont('Arial','B','8');
-	$pdf->Text(20,78,"100% PEFC Certified-ICILA-PEFC COC-002700");
-	$pdf->Image("../img/loghi/LOGO-PEFC.JPG", 135, 2, 49 );
+	if($ditta == "FR"){
+		$pdf->SetFont('Arial','B','6');
+		$pdf->Text(20,78,"100% PEFC Certified-ICILA-PEFC COC-002766");
+		$pdf->Image("../img/loghi/LOGO-PEFC-FR.JPG", 135, 2, 49 );
+	} else {
+		$pdf->SetFont('Arial','B','6');
+		$pdf->Text(20,78,"100% PEFC Certified-ICILA-PEFC COC-002700");
+		$pdf->Image("../img/loghi/LOGO-PEFC.JPG", 135, 2, 49 );
+	}
 }
 
 // -------------------------------------------------- //

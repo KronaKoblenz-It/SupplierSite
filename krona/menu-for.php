@@ -3,7 +3,7 @@
 /* CASASOFT ArcaWeb                               				        */
 /* ===========================                                          */
 /*                                                                      */
-/* Copyright (c) 2003-2018 by Roberto Ceccarelli                        */
+/* Copyright (c) 2003-2020 by Roberto Ceccarelli                        */
 /*                                                                      */
 /************************************************************************/
 
@@ -28,12 +28,15 @@ visualizza_novita($cookie[0], $dbase);
 print("<table class=\"list\">\n");
 if("F01021" == $cookie[0]) {
 	menuItem("cli-detail.php?id=" . $cookie[0], _("Carichi di produzione & Ordini Lav. Interni"));
+	menuItem("cli-detail48.php?id=" . $cookie[0], _("Carichi di produzione & Ordini Lav. Interni - Nuove etichette"));
 } else {
 	menuItem("cli-detail.php?id=" . $cookie[0], $str_eleord[$lang]);
+	menuItem("cli-detail48.php?id=" . $cookie[0], $str_eleord[$lang]." - Nuove etichette");
 }
 menuItem("art-detail.php?id=" . $cookie[0], _("Articoli in ordine"));
 if(!$isCdep) {
 	menuItem("askdb.php", _("Inserimento bolla"));
+	menuItem("askdbf.php", _("Inserimento lotti di produzione"));
 	menuItem("ddttoload.php", _("Bolle in attesa di acquisizione"));
 	//menuItem("ddtimport.php", _("Caricamento bolle da file XML"));
 	menuItem("ddtimportxls.php", _("Caricamento bolle da file Excel"));
@@ -45,10 +48,33 @@ if(!$isCdep) {
 }
 menuItem("magart_forn.php", _("Anagrafica articoli"));
 menuItem("giornalemaga.php", _("Situazione magazzino"));
+menuItem("askdb_bc.php", _("Lista di prelievo"));
+menuItem("askdb_lp.php", _("Bolla da lista di prelievo"));
 
-if("F02707" == $cookie[0]) {
-	menuItem("cliGrass.php", _("Movimenti clienti conto deposito"));
+// Produzione kuantica
+if("F02838" == $cookie[0]) {
+//	menuItem("askdb-denken.php?gruppo=B0631", _("Lancio produzione Denken - Karakter"));
+//	menuItem("askdb-denken.php?gruppo=B0630", _("Lancio produzione Denken - Slim"));
+	menuItem("menu-kuantica.php", _("Lanci di produzione"));
 }
+
+// Produzione EUR Service
+if("F02884" == $cookie[0]) {
+	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0352", _("Lancio produzione MACCHINA X ASSEMB BOCCOLE SU BIELLE 'S0068' FASE 1  - K6360"));
+	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0353", _("Lancio produzione MACCHINA X ASSEMB. CERNIERA 'S0068' FASE 2-4-5-6-7 - K6360"));
+	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0354", _("Lancio produzione MACCHINA X AVVITATURA CERN. 'S0068' FASE 9-10-11- K6360"));
+	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0363", _("Lancio produzione MACCHINA X ASSEMB BOCCOLE SU BIELLE 'S0076' FASE 1- K2760"));
+	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0364", _("Lancio produzione MACCHINA X ASSEMB. CERNIERA 'S0076' FASE 2-4-5-6-7 – K2760"));
+	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0365", _("Lancio produzione MACCHINA X AVVITATURA CERN. 'S0076' FASE 9-10-11 –K2760"));
+	// menuItem("askdb-eurservice.php?gruppo=UT25024A00300", _("Lancio produzione ATT. ASSEMBLAGGIO. PERNO/CARCASSA 'S0068' FASE 8 K6360/K2760/K2460/ABSU"));
+	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0415", _("Lancio produzione MACCHINA ASSEMBLAGGIO"));
+	menuItem("menu-eurservice.php", _("Lanci di produzione"));
+
+}
+
+// if("F02884" == $cookie[0]) {
+	// menuItem("cliGrass.php", _("Movimenti clienti conto deposito"));
+// }
 
 if("F01540" == $cookie[0]) {
 	menuItem("rlimportxls.php", _("Resi non lavorati da Excel"));

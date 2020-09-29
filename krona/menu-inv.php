@@ -53,7 +53,7 @@ print("</tr>\n");
 menuItem("inv-list.php?mode=attr", _("Verifica inventario attrezzature"));
 
 // manuale
-$value="04-Inventario_di_magazzino_%20rel_del_27_11_18.pdf";
+$value="04_Inventario_di_magazzino_rel_del_18_07_19.pdf";
 print("<tr class=\"list\">\n");
 print("<th class=\"menu\">
 	<a href=\"./manuali/$value\" target=\"_blank\">

@@ -19,21 +19,22 @@ $conn = db_connect($dbase);
 $cCodiceCF = $_GET['codcf'];
 $cCodiceArt = $_GET['codart'];
 
-$Query = "SELECT DOCRIG.ID_TESTA, DOCTES.TIPODOC, DOCTES.NUMERODOC, DOCTES.DATADOC, DOCRIG.DATAINIZIO, DOCRIG.QUANTITARE, DOCRIG.ID ";
+$Query = "SELECT DOCRIG.ID_TESTA, DOCTES.TIPODOC, DOCTES.NUMERODOC, DOCTES.DATADOC, DOCRIG.DATAINIZIO, DOCRIG.QUANTITARE, DOCRIG.ID, DOCRIG.DATACONSEG ";
 $Query .= " FROM DOCRIG INNER JOIN DOCTES ON DOCTES.ID = DOCRIG.ID_TESTA";
 $Query .= " WHERE DOCRIG.CODICEARTI =\"$cCodiceArt\" AND DOCTES.CODICECF =\"$cCodiceCF\" AND DOCRIG.QUANTITARE > 0";
-$Query .= " AND (DOCTES.TIPODOC=\"FO\" OR DOCTES.TIPODOC=\"LO\" OR DOCTES.TIPODOC=\"OF\" OR DOCTES.TIPODOC=\"OL\")";
+$Query .= " AND (DOCTES.TIPODOC=\"FO\" OR DOCTES.TIPODOC=\"LO\" OR DOCTES.TIPODOC=\"OF\" OR DOCTES.TIPODOC=\"OL\" OR DOCTES.TIPODOC=\"OM\" OR DOCTES.TIPODOC=\"OW\" OR DOCTES.TIPODOC=\"MO\" OR DOCTES.TIPODOC=\"WO\")";
 $Query .= " ORDER BY DOCRIG.DATACONSEG";
 $queryexe = db_query($conn, $Query) or die(mysql_error()); 
 
 print("<listaord>\n"); 
 while($row = db_fetch_row($queryexe)) { 
+	$datacons = (empty($row[7]) ? $row[4] : $row[7]);
   print("<ordine>\n"); 
   print("<id_testa>"  . $row[0] . "</id_testa>\n"); 
   print("<tipodoc>" . $row[1] . "</tipodoc>\n");
   print("<numerodoc>" . $row[2] . "</numerodoc>\n"); 
   print("<datadoc>" . format_date($row[3]) . "</datadoc>\n"); 
-  print("<dataconseg>" . format_date($row[4]) . "</dataconseg>\n"); 
+  print("<dataconseg>" . format_date($datacons) . "</dataconseg>\n"); 
   print("<quantitare>" . $row[5] . "</quantitare>\n");  
   print("<id>"  . $row[6] . "</id>\n"); 
   print("</ordine>\n");

@@ -136,8 +136,10 @@ function mostraDistinta($articolo) {
 	$Query = "SELECT DATADOC, U_DTESPLD FROM DOCRIG WHERE ID = $rif";
 	$rs = db_query($conn, $Query) or die(mysql_error()); 
 	$row = mysql_fetch_object($rs);
+	// ROBERTO - 24.09.2020 - Vaccari ha di nuovo cambiato idea e adesso non vuole più i codici duplicati.
+//	$nCompLen  = xEsplodiNR($articolo, $row->U_DTESPLD, 1, &$aComp, 0, 0);
 	$nCompLen  = xEsplodi($articolo, $row->U_DTESPLD, 1, &$aComp, 0, 0);
-
+	
 	$warning = false;	
 	for($j = 1; $j <= $nCompLen; $j++) {
 		tableRow($j, $aComp[$j][codice], $aComp[$j][um], $aComp[$j][consumo]);

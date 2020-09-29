@@ -62,7 +62,7 @@ print("</tr>\n</thead>\n<tbody>\n");
 //SQL query  
 $Query = "SELECT CODICEARTI, SUM(QUANTITA) AS QTAORD, SUM(QUANTITARE) AS QTARE, MAX(DESCRIZION) AS DESCR, UNMISURA FROM DOCRIG";
 $Query .= " WHERE CODICEARTI != \"\" AND CODICECF = \"$codcf\" AND " ;
-$Query .= ("F01021" == $codcf ? "(TIPODOC=\"CP\" or TIPODOC=\"OI\")" : "(TIPODOC=\"OC\" or TIPODOC=\"FO\" or TIPODOC=\"LO\" or TIPODOC=\"OF\" or TIPODOC=\"OL\")");
+$Query .= ("F01021" == $codcf ? "(TIPODOC=\"CP\" or TIPODOC=\"OI\")" : "(TIPODOC=\"OC\" or TIPODOC=\"FO\" or TIPODOC=\"LO\" or TIPODOC=\"OF\" or TIPODOC=\"OL\" or TIPODOC=\"OM\" or TIPODOC=\"OW\" or TIPODOC=\"MO\" or TIPODOC=\"WO\")");
 $Query .= " GROUP BY CODICEARTI, UNMISURA";
 //print("$Query<br>");
 

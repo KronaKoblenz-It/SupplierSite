@@ -294,7 +294,7 @@ if(!$err) {
 							$giac = $row2->GIACENZA;
 						} else {
 							$giac = 0;
-										$ERR_LOT_C = 1;
+							$ERR_LOT_C = 1;
 						}
 						$varGiac=$giac+webMovs::giacWebMov($maga, $art, $lottoC)+giacTemp($art,$lottoC,$consumoArtC);
 						if ($consumoArtC > $varGiac){
@@ -343,11 +343,11 @@ if(!$err) {
 							$varGiac=$varGiac+webMovs::giacWebMov($maga, $art, '')+giacTemp($art,'',$consumoArtC);
 							if ($consumoArtC > $varGiac){
 								if (strpos($art,"FER.VAR.0095") === false){
-									$ERR_GIAC = 1;
+									$ERR_GIAC = 1;		
 								}
 							}
 						} else {
-							$ERR_GIAC = 1;
+							$ERR_GIAC = 1;	
 						}
 					}
 				}

@@ -3,7 +3,7 @@
 /* CASASOFT ArcaWeb                               		      			*/
 /* ===========================                                          */
 /*                                                                      */
-/* Copyright (c) 2003-2018 by Roberto Ceccarelli                        */
+/* Copyright (c) 2003-2019 by Roberto Ceccarelli                        */
 /* http://strawberryfield.altervista.org								*/
 /*                                                                      */
 /************************************************************************/
@@ -36,7 +36,7 @@ $eserc = current_year();
 
 //Lista articoli da considerare
 $Query = <<<EOT
-select CODICE, DESCRIZION, UNMISURA, PESOUNIT, GGRIOR, LOTTOMIN, LOTTORIOR
+select CODICE, DESCRIZION, UNMISURA, PESOUNIT, GGRIOR, LOTTOMIN, LOTTORIOR, U_FM
 from MAGART
 where FORNSTD = '$forn'
 and STATOART not in ('2', '3', '5')
@@ -61,10 +61,17 @@ print("<tbody>\n");
 //query database
 while($row = db_fetch_row($queryexe))
     {
+	// ad alcuni fornitori permettiamo di vedere le distinte complete
+	if($forn == "F02838" || $row[7] == 1) {
+		$rigacodice = "<td class=\"list\"><a target=\"_blank\" title=\"Vedi la distinta completa\" href=\"mostradistinta.php?articolo=" . urlencode($row[0]) . "\">{$row[0]}</a></td>";
+	} else {
+		$rigacodice = "<td class=\"list\">{$row[0]}</td>";
+	}
+	
     //format results
 	$htmlrow = <<<EOT
 <tr class="list">
-<td class="list">{$row[0]}</td>
+$rigacodice
 <td class="list">{$row[1]}</td>
 <td class="list" align="right">{$row[3]}</td>
 <td class="list">{$row[2]}</td>
