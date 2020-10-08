@@ -278,6 +278,42 @@ EOT;
 					print(">" . $row->LOTTO . ($row->U_NOCE == 1 ? _(" (non CEE)") : "") . _(" - Giac.:") . $varGiac ." ".$umP."</option>\n");
 				}
 			}
+			
+			// ROBERTO 05.10.2020 - Ripetiamo il giro aggiungendo il lotto dai movimenti provvisori
+			$Query = <<<EOT
+SELECT SUM(U_BARDR.QUANTITA) AS GIACENZA, U_BARDR.LOTTO
+,0 AS U_NOCE 
+FROM U_BARDR 
+WHERE U_BARDR.CODICEARTI = '$codice'
+AND U_BARDR.MAGARRIVO = '$maga'
+AND U_BARDR.TIPODOC='CT' AND U_BARDR.ESPLDISTIN='P' AND U_BARDR.DEL = 0
+GROUP BY LOTTO, U_NOCE
+ORDER BY LOTTO DESC
+EOT;
+			$rs = db_query($conn, $Query) or die(mysql_error());			
+			while ($row = mysql_fetch_object($rs))	{
+				if($row->GIACENZA > 0) {
+					$cnt++;
+					print("<option value=\"" . $row->LOTTO . "\"");
+					$varGiac=xRound($row->GIACENZA);
+					if( $copy > 0) {
+						//if( $rw->LOTTO == $row->LOTTO)
+						if( ($rw->LOTTO == $row->LOTTO)  || ($rw->LOTTO == str_replace("-","",$row->LOTTO)) ) {
+							print(" selected=\"selected\"");
+							$found=true;
+							$giacSelected = $varGiac;
+						}
+					} else {
+						if( $cnt == 1) {
+							print(" selected=\"selected\"");
+							$giacSelected = $varGiac;
+						}
+					}
+					print(">" . $row->LOTTO . ($row->U_NOCE == 1 ? _(" (non CEE)") : "") . _(" - Giac.:") . $varGiac ." ".$umP."</option>\n");
+				}
+			}		
+			// Fine secondo giro
+			
 			if($copy > 0 and !$found){
 				print("<option value=\"" . $rw->LOTTO . "\" selected=\"selected\">" . $rw->LOTTO . _(" - Giac.:") . " 0 ".$umP."</option>\n");
 			$varGiac=0;

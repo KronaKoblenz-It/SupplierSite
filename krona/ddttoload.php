@@ -83,7 +83,7 @@ print("<tbody>\n");
 // $Query .= " WHERE U_BARDT.DEL=2 AND U_BARDR.DEL=2 AND U_BARDR.ESPLDISTIN = 'P' AND U_BARDT.CODICECF = \"" . $cookie[0] ;
 // $Query .= "\" ORDER BY U_BARDT.DATADOC DESC, U_BARDT.RIF_NUMERODOC ASC ";
 
-$Query = "SELECT U_BARDT.DATADOC, U_BARDT.ID, U_BARDT.NUMERODOCF, ";
+$Query = "SELECT U_BARDT.DATADOC, U_BARDT.ID, U_BARDT.NUMERODOCF, U_BARDT.TIPODOC AS BOTYPE, ";
 $Query .= "DOCTES.TIPODOC AS RIF_TIPODOC, DOCTES.NUMERODOC AS RIF_NUMERODOC, DOCTES.DATADOC AS RIF_DATADOC, ";
 $Query .= "U_BARDR.CODICEARTI, MAGART.DESCRIZION AS DESART, U_BARDR.QUANTITA, U_BARDR.LOTTO, U_BARDR.ID AS ID_RIGA ";
 $Query .= "FROM U_BARDT RIGHT JOIN U_BARDR ON U_BARDT.ID = U_BARDR.ID_TESTA LEFT JOIN MAGART ON MAGART.CODICE = U_BARDR.CODICEARTI ";
@@ -101,7 +101,7 @@ $queryexe = db_query($connectionstring, $Query) or die("$Query<br>" . mysql_erro
 		common_body($row);
 		print("<td class=\"list\" align=\"center\">");
 		//print("<a href=\"okdoc.php?id=" . $row->ID . "&id_riga=" . $row->ID_RIGA . "\" >");
-		print("<button onclick='okTracciato(".$row->NUMERODOCF.", ".$row->ID.");'>");
+		print("<button onclick='okTracciato(\"".$row->BOTYPE."_".$row->NUMERODOCF. "\", ".$row->ID.");'>");
 		print("<img noborder src=\"../img/b_check.png\" height=\"20\">");
 		print("</button></td>\n");
 		//print("</a></td>\n");
@@ -132,7 +132,7 @@ print("<tbody>\n");
 // $Query .= " WHERE U_BARDT.DEL=0 AND U_BARDR.DEL=0 AND U_BARDR.ESPLDISTIN = 'P' AND U_BARDT.CODICECF = \"" . $cookie[0] ;
 // $Query .= "\" ORDER BY U_BARDT.DATADOC DESC, U_BARDT.RIF_NUMERODOC ASC ";
 
-$Query = "SELECT U_BARDT.DATADOC, U_BARDT.ID, U_BARDT.NUMERODOCF, ";
+$Query = "SELECT U_BARDT.DATADOC, U_BARDT.ID, U_BARDT.NUMERODOCF, U_BARDT.TIPODOC AS BOTYPE, ";
 $Query .= "DOCTES.TIPODOC AS RIF_TIPODOC, DOCTES.NUMERODOC AS RIF_NUMERODOC, DOCTES.DATADOC AS RIF_DATADOC, ";
 $Query .= "U_BARDR.CODICEARTI, MAGART.DESCRIZION AS DESART, U_BARDR.QUANTITA, U_BARDR.LOTTO, U_BARDR.ID AS ID_RIGA ";
 $Query .= "FROM U_BARDT RIGHT JOIN U_BARDR ON U_BARDT.ID = U_BARDR.ID_TESTA LEFT JOIN MAGART ON MAGART.CODICE = U_BARDR.CODICEARTI ";
@@ -172,7 +172,7 @@ print("</tr>\n");
 print("</thead>\n");
 print("<tbody>\n");
 
-$Query = "SELECT U_BARDT.DATADOC, U_BARDT.ID, U_BARDT.NUMERODOCF, ";
+$Query = "SELECT U_BARDT.DATADOC, U_BARDT.ID, U_BARDT.NUMERODOCF, U_BARDT.TIPODOC AS BOTYPE, ";
 $Query .= "\"\" AS RIF_TIPODOC, \"\" AS RIF_NUMERODOC, \"\" AS RIF_DATADOC, ";
 $Query .= "U_BARDR.CODICEARTI, MAGART.DESCRIZION AS DESART, U_BARDR.QUANTITA, U_BARDR.LOTTO, U_BARDR.ID AS ID_RIGA ";
 $Query .= "FROM U_BARDT RIGHT JOIN U_BARDR ON U_BARDT.ID = U_BARDR.ID_TESTA LEFT JOIN MAGART ON MAGART.CODICE = U_BARDR.CODICEARTI ";
@@ -222,7 +222,7 @@ function common_header() {
 
 function common_body($row){
 	print("<tr class=\"list\">\n");
-	print("<td class=\"list\">" . $row->NUMERODOCF . "</td>\n");
+	print("<td class=\"list\">" . $row->BOTYPE . " " . $row->NUMERODOCF . "</td>\n");
 	print("<td class=\"list\">" . $row->RIF_TIPODOC . "</td>\n");
 	print("<td class=\"list\">" . $row->RIF_NUMERODOC . "</td>\n");
 	print("<td class=\"list\">" . format_date($row->RIF_DATADOC) . "</td>\n");

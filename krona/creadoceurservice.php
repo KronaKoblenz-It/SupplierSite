@@ -61,9 +61,9 @@ $row = mysql_fetch_object($rs);
 // ROBERTO 05.05.2015
 // Se esiste già una testa per il fornitore ed il documento la riutilizziamo
 // senza creare un documento nuovo
-$Query = 'SELECT ID FROM U_BARDT WHERE ';
+$Query = 'SELECT ID_TESTA AS ID FROM U_BARDR WHERE ';
 $Query .= "CODICECF = '$fornitore' AND TIPODOC = '$tipodoc' AND ";
-$Query .= 'NUMERODOCF = "'.$_POST['padre'].'" AND DEL <> 1';
+$Query .= 'CODICEARTI = "'.$_POST['padre'].'" AND LOTTO="'. $_POST['lottopadre'] .'" AND ESPLDISTIN = "P" AND DEL <> 1';
 $rs = db_query($conn, $Query) or die($Query.mysql_error());
 if ($testa = mysql_fetch_object($rs)) {
     $id_testa = $testa->ID;
@@ -71,6 +71,9 @@ if ($testa = mysql_fetch_object($rs)) {
     $rs = db_query($conn, $Query) or die($Query.mysql_error());
     $riga = mysql_fetch_object($rs);
     $id = $riga->ID_RIGA + 1;
+	$Query = "DELETE FROM U_BARDR WHERE ID_TESTA=$id_testa";
+    $rs = db_query($conn, $Query) or die("$Query<br>".mysql_error());
+
 } else {
     $id_testa = (time() % 100000) + substr($fornitore, -4) * 100000;
 
@@ -80,7 +83,7 @@ if ($testa = mysql_fetch_object($rs)) {
     $Query .= "'".date('Y-m-d')."', '".date('Y')."', ";
     $Query .= "'$fornitore', ";
     $Query .= "'$tipodoc', '', '".$_POST['padre']."', ";
-    $Query .= "'$maga', '$maga', 0, ";
+    $Query .= "'$maga', '$maga', 2, ";
     $Query .= '"'.$row->TIPODOC.'", "'.$row->NUMERODOC.'", "'.$row->DATADOC.'" )';
     //print($Query."<br>");
     $rs = db_query($conn, $Query) or die($Query.mysql_error());
@@ -209,13 +212,14 @@ function scriviRiga($id, $id_testa, $id_rifriga, $espldistin, $fornitore, $codic
     } else {
         $Query .= "\"$descrizion\", ";
     }
-    $Query .= "0, ";
+    //$Query .= "0, ";
+    $Query .= "$qta, ";
     $Query .= "\"$lotto\", ";
     $Query .= '"", ';
     $Query .= "\"$maga\", \"$maga\", ";
     $Query .= $_POST['rift'].', '.$_POST['rifr'].', ';
     $Query .= "\"$cliven\", ";
-    $Query .= " 0, $qtadist )";
+    $Query .= " 2, $qtadist )";
     //print($Query."<br>");
     $rs = db_query($conn, $Query) or die($Query.mysql_error());
 

@@ -39,6 +39,10 @@ class webMovs
             $qtaCar = 1;
             $qtaScar = 0;
         }
+        if (strcmp($tipoDoc, 'CT') == 0 && $idPadre == $idRow) {
+            $qtaCar = 1;
+            $qtaScar = 0;
+        }
         $Query = "INSERT INTO U_WEBMOVS
 								(ID_TESTA, ID_RIGA, ID_RIGA_P, MAGAZZINO, ARTICOLO, LOTTO, QUANTITA, QTA_CAR, QTA_SCAR, RIFDOC, DATAMOV)
 								VALUES
