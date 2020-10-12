@@ -194,7 +194,7 @@ function scriviRiga($id, $id_testa, $id_rifriga, $espldistin, $fornitore, $codic
 {
     global $conn, $nDocF;
     $Query = 'INSERT INTO U_BARDR ';
-    $Query .= '(ID, ID_TESTA, ID_RIFRIGA, ESPLDISTIN, DATADOC, CODICECF, TIPODOC, CODICEARTI, DESCRIZION, QUANTITA, LOTTO, NUMERODOC, MAGPARTENZ, MAGARRIVO, RIFFROMT, RIFFROMR, U_CLIVEN, DEL, QTADIST) VALUES ( ';
+    $Query .= '(ID, ID_TESTA, ID_RIFRIGA, ESPLDISTIN, DATADOC, CODICECF, TIPODOC, CODICEARTI, DESCRIZION, QUANTITA, LOTTO, NUMERODOC, MAGPARTENZ, MAGARRIVO, RIFFROMT, RIFFROMR, U_CLIVEN, DEL, QTADIST, QTAORIG) VALUES ( ';
     $Query .= "$id, ";
     $Query .= "$id_testa, ";
     $Query .= "$id_rifriga, ";
@@ -212,14 +212,13 @@ function scriviRiga($id, $id_testa, $id_rifriga, $espldistin, $fornitore, $codic
     } else {
         $Query .= "\"$descrizion\", ";
     }
-    //$Query .= "0, ";
-    $Query .= "$qta, ";
+    $Query .= "0, ";
+    //$Query .= "$qta, ";
     $Query .= "\"$lotto\", ";
-    $Query .= '"", ';
-    $Query .= "\"$maga\", \"$maga\", ";
+    $Query .= "'', '$maga', '$maga',";
     $Query .= $_POST['rift'].', '.$_POST['rifr'].', ';
     $Query .= "\"$cliven\", ";
-    $Query .= " 2, $qtadist )";
+    $Query .= " 2, $qtadist, $qta )";
     //print($Query."<br>");
     $rs = db_query($conn, $Query) or die($Query.mysql_error());
 
