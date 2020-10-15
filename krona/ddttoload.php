@@ -57,21 +57,31 @@ head(dataTableInit($inc));
 		}
 	};
 
-	function okTracciatoCT(nBolla, id, qta, qtaLav) {
+	function okTracciatoCT(nBolla, id, qtaOrig, qtaLav) {
 		var r = false;
-		if (qtaLav != qta) {
-			r1 = confirm(" n. " + nBolla + " ?");
-			if(r1) {
-
+		var r1 = false;
+		if (qtaLav != qtaOrig) {
+			r1 = confirm("ATTENZIONE!!!!!\nQuantita Lavorata [" + qtaLav + "] DISCORDANTE con Quantita Lanciata [" + qtaOrig + "] in n. " + nBolla + "\nForzo Allineamento Quantita? ");
+			if (r1) {
+				var url = "okQtaDoc.php?id=" + id;
+				window.location.assign(url);
+			} else {
+				r = confirm("Confermare Bolla n. " + nBolla + " con la attuale Quantita Lavorata [" + qtaLav + "] ?");
+				if (r) {
+					var url = "okdoc.php?id=" + id;
+					window.location.assign(url);
+				} else {
+					return false;
+				}
 			}
-		}
-
-		r = confirm("Confermare Interamente Bolla n. " + nBolla + " ?");
-		if (r) {
-			var url = "okdoc.php?id=" + id;
-			window.location.assign(url);
 		} else {
-			return false;
+			r = confirm("Confermare Bolla n. " + nBolla + " con la attuale Quantita Lavorata [" + qtaLav + "] ?");
+			if (r) {
+				var url = "okdoc.php?id=" + id;
+				window.location.assign(url);
+			} else {
+				return false;
+			}
 		}
 	};
 </script>
@@ -129,7 +139,11 @@ while ($row = mysql_fetch_object($queryexe)) {
 	}
 	print("<td class=\"list\" align=\"center\">");
 	//print("<a href=\"okdoc.php?id=" . $row->ID . "&id_riga=" . $row->ID_RIGA . "\" >");
-	print("<button onclick='okTracciato(\"" . $row->BOTYPE . "_" . $row->NUMERODOCF . "\", " . $row->ID . ");'>");
+	if ($row->BOTYPE == "CT" && $row->QUANTITA < $row->QTAORIG) {
+		print("<button onclick='okTracciatoCT(\"" . $row->BOTYPE . "_" . $row->NUMERODOCF . "\", " . $row->ID . ", " . $row->QTAORIG . ", " . $row->QUANTITA . ");'>");
+	} else {
+		print("<button onclick='okTracciato(\"" . $row->BOTYPE . "_" . $row->NUMERODOCF . "\", " . $row->ID . ");'>");
+	}
 	print("<img noborder src=\"../img/b_check.png\" height=\"20\">");
 	print("</button></td>\n");
 	//print("</a></td>\n");
