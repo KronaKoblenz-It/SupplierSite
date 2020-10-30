@@ -65,7 +65,7 @@ $Query = 'SELECT ID_TESTA AS ID FROM U_BARDR WHERE ';
 $Query .= "CODICECF = '$fornitore' AND TIPODOC = '$tipodoc' AND ";
 $Query .= 'CODICEARTI = "'.$_POST['padre'].'" AND LOTTO="'. $_POST['lottopadre'] .'" AND ESPLDISTIN = "P" AND DEL <> 1';
 $rs = db_query($conn, $Query) or die($Query.mysql_error());
-if ($testa = mysql_fetch_object($rs)) {
+if ($testa = mysql_fetch_object($rs) && 1>2) {
     $id_testa = $testa->ID;
     $Query = "SELECT MAX(ID) AS ID_RIGA FROM U_BARDR WHERE ID_TESTA = $id_testa";
     $rs = db_query($conn, $Query) or die($Query.mysql_error());
