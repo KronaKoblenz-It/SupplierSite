@@ -60,16 +60,8 @@ if("F02838" == $cookie[0]) {
 
 // Produzione EUR Service
 if("F02884" == $cookie[0]) {
-	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0352", _("Lancio produzione MACCHINA X ASSEMB BOCCOLE SU BIELLE 'S0068' FASE 1  - K6360"));
-	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0353", _("Lancio produzione MACCHINA X ASSEMB. CERNIERA 'S0068' FASE 2-4-5-6-7 - K6360"));
-	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0354", _("Lancio produzione MACCHINA X AVVITATURA CERN. 'S0068' FASE 9-10-11- K6360"));
-	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0363", _("Lancio produzione MACCHINA X ASSEMB BOCCOLE SU BIELLE 'S0076' FASE 1- K2760"));
-	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0364", _("Lancio produzione MACCHINA X ASSEMB. CERNIERA 'S0076' FASE 2-4-5-6-7 – K2760"));
-	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0365", _("Lancio produzione MACCHINA X AVVITATURA CERN. 'S0076' FASE 9-10-11 –K2760"));
-	// menuItem("askdb-eurservice.php?gruppo=UT25024A00300", _("Lancio produzione ATT. ASSEMBLAGGIO. PERNO/CARCASSA 'S0068' FASE 8 K6360/K2760/K2460/ABSU"));
-	// menuItem("askdb-eurservice.php?gruppo=MAT.AZ.0415", _("Lancio produzione MACCHINA ASSEMBLAGGIO"));
 	menuItem("menu-eurservice.php", _("Lanci di produzione"));
-
+	menuItem("menu-eurservice-conf.php", _("Configurazione macchine"));
 }
 
 // if("F02884" == $cookie[0]) {

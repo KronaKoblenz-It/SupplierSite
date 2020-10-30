@@ -224,6 +224,11 @@ var checkQuantita = function(){
 <?php
 $connectionstring = db_connect($dbase);
 
+$Query = "select DESCRIZION from GESTIONE_MACCHINE where CODICE = '$gruppoFiltro'";
+$queryexe = db_query($connectionstring, $Query) or die(mysql_error());
+$row = mysql_fetch_object($queryexe);
+$descMacchina = trim($row->DESCRIZION);
+/*
 $descMacchina = ""; 
 if($gruppoFiltro == "MAT.AZ.0352" )  {$descMacchina = "Lancio produzione MACCHINA X ASSEMB BOCCOLE SU BIELLE 'S0068' FASE 1  - K6360";} 
 if($gruppoFiltro == "MAT.AZ.0353" )  {$descMacchina = "Lancio produzione MACCHINA X ASSEMB. CERNIERA 'S0068' FASE 2-4-5-6-7 - K6360";}
@@ -233,18 +238,26 @@ if($gruppoFiltro == "MAT.AZ.0364" )  {$descMacchina = "Lancio produzione MACCHIN
 if($gruppoFiltro == "MAT.AZ.0365" )  {$descMacchina = "Lancio produzione MACCHINA X AVVITATURA CERN. 'S0076' FASE 9-10-11 –K2760";}
 if($gruppoFiltro == "UT25024A00300") {$descMacchina = "Lancio produzione ATT. ASSEMBLAGGIO. PERNO/CARCASSA 'S0068' FASE 8 K6360/K2760/K2460/ABSU";}
 if($gruppoFiltro == "MAT.AZ.0415" )  {$descMacchina = "Lancio produzione MACCHINA ASSEMBLAGGIO";}
-
+*/
 $listaArticoli = ""; 
-if($gruppoFiltro == "MAT.AZ.0352" )  {$listaArticoli = "'GFS0068A00400'";}
-if($gruppoFiltro == "MAT.AZ.0353" )  {$listaArticoli = "'GFS0068A00700'";}
-if($gruppoFiltro == "MAT.AZ.0354" )  {$listaArticoli = "'GFS0068A00100','GFS0068A00200'";}
-if($gruppoFiltro == "MAT.AZ.0363" )  {$listaArticoli = "'GFS0076A00100'";}
-if($gruppoFiltro == "MAT.AZ.0364" )  {$listaArticoli = "'GFS0076A00200'";}
-if($gruppoFiltro == "MAT.AZ.0365" )  {$listaArticoli = "'GFS0076A00500'";}
-if($gruppoFiltro == "UT25024A00300") {$listaArticoli = "'GFS0068A00800','GFS0068A00900','GFS0076A00400','GFS0066A00100','GFS0501A028GG','GFS0501A030GG','GFS0501A03100','GFS0501A01900','GFS0501A03600','GFS0501A06500','GFS0501A06600','GFS0501A06700','GFS0501A06800','GFS0501A08000'";}
-if($gruppoFiltro == "MAT.AZ.0415" )  {$listaArticoli = "'GFS0501A05700','GFS0501A05800','GFS0501A05900','GFS0501A04000','GFS0501A04100','GFS0501A04200','GFS0501A07400'";}
-
-
+/*
+if($gruppoFiltro == "MAT.AZ.0352" )  {$listaArticoli = "'GFS0068A00400','GFS0095A00100'";}
+if($gruppoFiltro == "MAT.AZ.0353" )  {$listaArticoli = "'GFS0068A00700','GFS0095A00200'";}
+if($gruppoFiltro == "MAT.AZ.0354" )  {$listaArticoli = "'GFS0068A00100','GFS0068A00200','GFS0095A00300','GFS0095A00400'";}
+if($gruppoFiltro == "MAT.AZ.0363" )  {$listaArticoli = "'GFS0076A00100','GFS0093A00100'";}
+if($gruppoFiltro == "MAT.AZ.0364" )  {$listaArticoli = "'GFS0076A00200','GFS0093A00200'";}
+if($gruppoFiltro == "MAT.AZ.0365" )  {$listaArticoli = "'GFS0076A00500','GFS0093A00500'";}
+if($gruppoFiltro == "UT25024A00300") {$listaArticoli = "'GFS0068A00800','GFS0068A00900','GFS0076A00400','GFS0066A00100','GFS0501A028GG','GFS0501A030GG','GFS0501A03100','GFS0501A01900','GFS0501A03600','GFS0501A05600','GFS0501A06800' ,'GFS0501A07100','GFS0501A07900','GFS0501A08000','GFS0501A08100','GFS0501A08200','GFS0501A08300','GFS0501A08400', 'CAS0045A003ZB','CAS0045A004ZB','GFS0045A02000','GFS0045A01400','GFS0045A01600'";}
+if($gruppoFiltro == "MAT.AZ.0415" )  {$listaArticoli = "'GFS0501A05700','GFS0501A05800','GFS0501A08600' ,'GFS0501A07300','GFS0501A07400','GFS0501A07500','GFS0501A07600','GFS0501A07700','GFS0501A07800', 'GFS0501A06900','GFS0501A03900','GFS0045A01300','GFS0045A01500'";}
+*/
+$Query = "select CODICEARTI from GESTIONE_ARTICOLI where MACCHINA = '$gruppoFiltro'";
+$queryexe = db_query($connectionstring, $Query) or die(mysql_error());
+while($row = mysql_fetch_object($queryexe)) {
+	$listaArticoli = "$listaArticoli,'{$row->CODICEARTI}'";
+}
+if ($listaArticoli != "") {
+	$listaArticoli = substr($listaArticoli,1);
+}
 
 session_start();
 $cookie = preg_split("/\|/",$_SESSION['CodiceAgente']);

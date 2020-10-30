@@ -3,7 +3,7 @@
 /* Project ArcaWeb                               				        */
 /* ===========================                                          */
 /*                                                                      */
-/* Copyright (c) 2003-2019 by Roberto Ceccarelli                        */
+/* Copyright (c) 2003-2020 by Roberto Ceccarelli                        */
 /* http://strawberryfield.altervista.org								*/
 /*                                                                      */
 /************************************************************************/
@@ -21,18 +21,25 @@ $conn = db_connect($dbase);
 $count = strtoupper($_POST['count']);
 $anno = current_year();
 
-head();
-banner($_POST['padre']);
+$padre= $_POST['padre'];
 $nDocF = $_POST['numerodocf'];
 $cliven = $_POST['cliven'];
-
+$macchina = $_POST['gruppo'];
 $idtesta = (isset($_POST['idtesta']) ? $_POST['idtesta'] : 0);
 $idriga = (isset($_POST['idriga']) ? $_POST['idriga'] : 0);
 
+head();
+banner($padre);
 
-// Scrittura documento CT per krona
+// Scrittura documento CT/CE per krona
 
 $tipodoc="CT";
+$Query = "select TIPODOC from GESTIONE_ARTICOLI where MACCHINA = '$macchina' and CODICEARTI = '$padre'";
+$rs = db_query($conn, $Query) or die("$Query<br>".mysql_error());
+while($row = mysql_fetch_object($rs)) {
+	$tipodoc = $row->TIPODOC;
+}
+
 if ($idtesta > 0) {
     if ($idriga > 0) {
         $Query = "DELETE FROM U_BARDR WHERE ID_RIFRIGA=$idriga AND ID_TESTA=$idtesta";
@@ -65,7 +72,7 @@ $Query = 'SELECT ID_TESTA AS ID FROM U_BARDR WHERE ';
 $Query .= "CODICECF = '$fornitore' AND TIPODOC = '$tipodoc' AND ";
 $Query .= 'CODICEARTI = "'.$_POST['padre'].'" AND LOTTO="'. $_POST['lottopadre'] .'" AND ESPLDISTIN = "P" AND DEL <> 1';
 $rs = db_query($conn, $Query) or die($Query.mysql_error());
-if ($testa = mysql_fetch_object($rs) && 1>2) {
+if ($testa = mysql_fetch_object($rs)) {
     $id_testa = $testa->ID;
     $Query = "SELECT MAX(ID) AS ID_RIGA FROM U_BARDR WHERE ID_TESTA = $id_testa";
     $rs = db_query($conn, $Query) or die($Query.mysql_error());
@@ -91,16 +98,16 @@ if ($testa = mysql_fetch_object($rs) && 1>2) {
     $id = ($id_testa % 1000000) * 1000;
 }
 // riga di commento
-$id = scriviRiga($id, $id_testa, $id + 1, '', $fornitore, '', 1, '', $maga, 'Rif. '.$row->TIPODOC.' '.$row->NUMERODOC.' del '.format_date($row->DATADOC), 'C', $_POST['rifr'], 'CT');
+$id = scriviRiga($id, $id_testa, $id + 1, '', $fornitore, '', 1, '', $maga, 'Rif. '.$row->TIPODOC.' '.$row->NUMERODOC.' del '.format_date($row->DATADOC), 'C', $_POST['rifr'], $tipodoc);
 $id_rigapadre = $id;
 
 // riga del padre
 $qtapadre = $_POST['quantita'];
-$id = scriviRiga($id, $id_testa, $id_rigapadre, 'P', $fornitore, $_POST['padre'], $qtapadre, $_POST['lottopadre'], $maga, '', $cliven, $_POST['rifr'], 'CT');
+$id = scriviRiga($id, $id_testa, $id_rigapadre, 'P', $fornitore, $_POST['padre'], $qtapadre, $_POST['lottopadre'], $maga, '', $cliven, $_POST['rifr'], $tipodoc);
 
 // righe componenti
 for ($j = 1; $j <= $count; ++$j) {
-    $id = scriviRiga($id, $id_testa, $id_rigapadre, 'C', $fornitore, $_POST["code$j"], $_POST["qta$j"], $_POST["lotto$j"], $maga, '', 'C', $_POST["rifr$j"], 'CT', $_POST["qta$j"]/$qtapadre);
+    $id = scriviRiga($id, $id_testa, $id_rigapadre, 'C', $fornitore, $_POST["code$j"], $_POST["qta$j"], $_POST["lotto$j"], $maga, '', 'C', $_POST["rifr$j"], $tipodoc, $_POST["qta$j"]/$qtapadre);
 }
 
 db_close($conn);
