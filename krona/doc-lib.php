@@ -51,7 +51,7 @@ du_table();
 $Query = "SELECT TIPODOC FROM DOCTES WHERE ID = $id";
 $queryexe = db_query($connectionstring, $Query); 
 $row = db_fetch_row($queryexe);
-$isOF = in_array($row[0], array("FO", "LO", "OF", "OL"));
+$isOF = in_array($row[0], array("FO", "LO", "OF", "OL", "OM", "MO", "OW", "WO", "AM"));
 $isBollaCL = in_array($row[0], array("BT", "CE", "RL", "TL"));
 $isOrd = ( $isOF or $row[0] == "OC");
 du_th($str_codice[$lang]);

@@ -53,7 +53,7 @@ function doc_rows($id, $connectionstring, $compAllowed = true) {
   $queryexe = db_query($connectionstring, $Query);
   $row = db_fetch_row($queryexe);
 
-  $isOF = in_array($row[0], array("FO", "LO", "OF", "OL", "OI", "GC", "OM", "OW", "MO", "WO"));
+  $isOF = in_array($row[0], array("FO", "LO", "OF", "OL", "OI", "GC", "OM", "OW", "MO", "WO", "AM"));
   $isBollaCL = in_array($row[0], array("BT", "CE", "RL", "TL", "CP", "BC"));
   $isOrd = ( $isOF or $row[0] == "OC");
 
