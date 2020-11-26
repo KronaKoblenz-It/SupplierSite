@@ -140,12 +140,14 @@ while ($row = mysql_fetch_object($queryexe)) {
 	print("<td class=\"list\" align=\"center\">");
 	//print("<a href=\"okdoc.php?id=" . $row->ID . "&id_riga=" . $row->ID_RIGA . "\" >");
 	if ($row->BOTYPE == "CT" && $row->QUANTITA < $row->QTAORIG) {
-		print("<button onclick='okTracciatoCT(\"" . $row->BOTYPE . "_" . $row->NUMERODOCF . "\", " . $row->ID . ", " . $row->QTAORIG . ", " . $row->QUANTITA . ");'>");
+		//print("<button onclick='okTracciatoCT(\"" . $row->BOTYPE . "_" . $row->NUMERODOCF . "\", " . $row->ID . ", " . $row->QTAORIG . ", " . $row->QUANTITA . ");'>");
+		// print("<img noborder src=\"../img/b_check.png\" height=\"20\">");
+		// print("</button></td>\n");
 	} else {
 		print("<button onclick='okTracciato(\"" . $row->BOTYPE . "_" . $row->NUMERODOCF . "\", " . $row->ID . ");'>");
+		print("<img noborder src=\"../img/b_check.png\" height=\"20\">");
+		print("</button></td>\n");
 	}
-	print("<img noborder src=\"../img/b_check.png\" height=\"20\">");
-	print("</button></td>\n");
 	//print("</a></td>\n");
 	print("<td class=\"list\" align=\"center\">");
 	print("<a href=\"deldoc.php?id=" . $row->ID . "\" >");
