@@ -50,11 +50,11 @@ $objPHPExcel->setActiveSheetIndex(0)
             ->setCellValue('C2', 'Descrizione')
             ->setCellValue('D2', 'UM')
             ->setCellValue('E2', 'Quantita Inventariata')
-            ->setCellValue('F2', 'Giacenza TOT. Attuale')
-            ->setCellValue('G2', 'COD. LOTTO')
-            ->setCellValue('H2', '')
-            ->setCellValue('I2', 'VS. CODICE');
-$objPHPExcel->getActiveSheet()->getStyle('A2:I2')->getFill()
+            ->setCellValue('F2', 'COD. LOTTO')
+            ->setCellValue('G2', '')
+			->setCellValue('H2', 'VS. CODICE');
+			// ->setCellValue('I2', 'Giacenza TOT. Attuale');
+$objPHPExcel->getActiveSheet()->getStyle('A2:H2')->getFill()
 	->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
 	->getStartColor()->setARGB('FF00FFFF');
 
@@ -155,7 +155,7 @@ $objWriter->save('php://output');
 function writeRow($row, $maga, $art, $desc, $um, $giac, $lotto, $isLotti, $codartfor) {
 global $objPHPExcel, $mode;
 // 15.12.2017 - ROBERTO
-// Il fornitore non deve vedere la quantità attuale
+// Il fornitore non deve vedere la quantitï¿½ attuale
 $giac = 0;
 	$objPHPExcel->setActiveSheetIndex(0)
             ->setCellValueExplicit("A$row", $maga, PHPExcel_Cell_DataType::TYPE_STRING);
@@ -168,18 +168,18 @@ $giac = 0;
 	$objPHPExcel->setActiveSheetIndex(0)
             ->setCellValue("E$row", $mode=="attr" ? $giac : 0);
 	$objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue("F$row", $giac);
-	$objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValueExplicit("G$row", $lotto, PHPExcel_Cell_DataType::TYPE_STRING);	
+            ->setCellValueExplicit("F$row", $lotto, PHPExcel_Cell_DataType::TYPE_STRING);	
 	if($isLotti){	
 		$objPHPExcel->setActiveSheetIndex(0)
-            		->setCellValueExplicit("H$row", "LOTTO OBBLIGATORIO", PHPExcel_Cell_DataType::TYPE_STRING);	
+            		->setCellValueExplicit("G$row", "LOTTO OBBLIGATORIO", PHPExcel_Cell_DataType::TYPE_STRING);	
 	} else {
 		$objPHPExcel->setActiveSheetIndex(0)
-            		->setCellValueExplicit("H$row", "", PHPExcel_Cell_DataType::TYPE_STRING);	
+            		->setCellValueExplicit("G$row", "", PHPExcel_Cell_DataType::TYPE_STRING);	
 	}
 	$objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValueExplicit("I$row", $codartfor, PHPExcel_Cell_DataType::TYPE_STRING);	
+			->setCellValueExplicit("H$row", $codartfor, PHPExcel_Cell_DataType::TYPE_STRING);
+	// $objPHPExcel->setActiveSheetIndex(0)
+	// 		->setCellValue("I$row", $giac);
 	
 }
 ?>

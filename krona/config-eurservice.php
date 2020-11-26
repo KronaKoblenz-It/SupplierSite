@@ -69,6 +69,7 @@ while($row = db_fetch_row($queryexe))
 <input type="hidden" name="macchina" value="$macchina">
 <input type="input" size="3" name="tipodoc" value="{$row[2]}">
 &nbsp;<input type="submit" value="Aggiorna">
+</form>
 </td>
 <td class="list">
 <form action="macchine_delarticolo.php">
@@ -77,6 +78,7 @@ while($row = db_fetch_row($queryexe))
 &nbsp;<input type="submit" value="Cancella">
 </td>
 </tr>
+</form>
 EOT;
     print ("$htmlrow\n");
     }

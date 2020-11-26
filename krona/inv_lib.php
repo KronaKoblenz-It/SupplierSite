@@ -15,6 +15,7 @@ $help="04_Inventario_di_magazzino_rel_01_14_del_10_12_14.pdf";
 $maga="";
 $cookie="";
 $fornitore="";
+//mode Ã¨ per attrezzature o normale
 $mode="";
 
 function pagestart() {
@@ -73,7 +74,7 @@ function download() {
 <br><br>
 <div id="warning">
 <span style='font-size: 20px'><b>Si prega di consultare la descrizione della procedura inventariale</b> (<a href="$help" target="_blank" title="ManualeInventario">clicca qui</a>)</br></span>
-<i>In caso di necessità contattare l'Ufficio Ced. (<a href="./mailto.php" target="_blank" title="CompilaMail">inventari@k-group.com</a>)</i>
+<i>In caso di necessitï¿½ contattare l'Ufficio Ced. (<a href="./mailto.php" target="_blank" title="CompilaMail">inventari@k-group.com</a>)</i>
 </div>
 <br><br>
 EOT;

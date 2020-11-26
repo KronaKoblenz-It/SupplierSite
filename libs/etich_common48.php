@@ -53,7 +53,7 @@ if($cCodice != ""){
     $row = mysql_fetch_object($queryexe);
     if($row->CODICE == ""){
         //Vuol dire che il codice è un codice alternativo
-        $Query = "SELECT CODICEARTI FROM CODALT WHERE CODARTFOR = \"$cCodice\" AND CODCLIFOR = \"$cliven\"";
+        $Query = "SELECT CODICEARTI FROM CODALT WHERE CODARTFOR = '$cCodice' AND CODCLIFOR = '$cliven'";
         $queryexe = db_query($conn, $Query);
         $row = mysql_fetch_object($queryexe);
         $cCodiceAlt = $cCodice;
@@ -61,7 +61,7 @@ if($cCodice != ""){
     }
 }
 
-$Query = "SELECT DESCRIZION, UNMISURA FROM MAGART WHERE CODICE = \"$cCodice\"";
+$Query = "SELECT DESCRIZION, UNMISURA FROM MAGART WHERE CODICE = '$cCodice'";
 $queryexe = db_query($conn, $Query) or die(mysql_error());
 $row = mysql_fetch_object($queryexe);
 $cUMPr = $row->UNMISURA;
@@ -101,6 +101,7 @@ $barcode = "";
 $codkrona = "";
 $codlingua = "IT";
 $pathlogo = $baselogo;
+$ragsoc = "KRONA KOBLENZ spa";
 $indirizzo = "v. Piane 90";
 $localita = "47853 CORIANO (RN)";
 $nazione = "IT - Italia";
@@ -113,7 +114,7 @@ if("" != $cliven && "C" != $cliven){
 
     $Query = <<<EOT
 SELECT ANAGRAFE.U_CODKRONA, ANAGRAFE.LINGUA, ANAGRAFE.U_LOGO, ANAGRAFE.INDIRIZZO, ANAGRAFE.LOCALITA, 
-ANAGRAFE.CAP, ANAGRAFE.CODNAZIONE,
+ANAGRAFE.CAP, ANAGRAFE.CODNAZIONE, ANAGRAFE.DESCRIZION AS RAGSOC, ANAGRAFE.SUPRAGSOC,
 NAZIONI.CODICEISO, NAZIONI.DESCRIZION
 FROM ANAGRAFE 
 LEFT OUTER JOIN NAZIONI ON NAZIONI.CODICE = ANAGRAFE.CODNAZIONE
@@ -121,6 +122,7 @@ WHERE ANAGRAFE.CODICE = '$cliven'
 EOT;
     $queryexe = db_query($conn, $Query) or die(mysql_error());
     $row = mysql_fetch_object($queryexe);
+	$ragsoc = trim(trim($row->RAGSOC) . " " . $row->SUPRAGSOC);
     $codkrona = $row->U_CODKRONA;
     $codlingua = trim($row->LINGUA);
     $pathlogo = trim($row->U_LOGO);
@@ -325,16 +327,18 @@ if($img_hafele != "") {
 if($pathlogo == "../img/loghi/LOGO-KRONA.JPG"){
     $pdf->Image($pathlogo, 9, 98, 35 );
 	$pdf->SetFont('Arial','B','6');
-	$pdf->Text(50,108,$indirizzo);
-	$pdf->Text(50,115,$localita);
-	$pdf->Text(50,122,$nazione);
+	$pdf->Text(50,104,$ragsoc);
+	$pdf->Text(50,111,$indirizzo);
+	$pdf->Text(50,118,$localita);
+	$pdf->Text(50,125,$nazione);
 }
 else{
     $pdf->Image($pathlogo, 9, 98 ,55);
 	$pdf->SetFont('Arial','B','6');
-	$pdf->Text(75,108,$indirizzo);
-	$pdf->Text(75,115,$localita);
-	$pdf->Text(75,122,$nazione);
+	$pdf->Text(75,104,$ragsoc);
+	$pdf->Text(75,111,$indirizzo);
+	$pdf->Text(75,118,$localita);
+	$pdf->Text(75,125,$nazione);
 }
 
 // -------------------------------------------------- //

@@ -148,12 +148,12 @@ if(!$err) {
 		}
 		
 		// lotto
-		$val = trim($worksheet->getCellByColumnAndRow(6, $row)->getValue());
+		$val = trim($worksheet->getCellByColumnAndRow(5, $row)->getValue());
 		$val = strtoupper($val);
 		if( $rs[1] and $val == "") {
 			echo "<td class=\"error\">Lotto obbligatorio</td>\n";
 			$err = true;
-			$warn = $warn. "<b>ATTENZIONE!</b></br>In Assenza di codice LOTTO inserire il codice generico '<b>INV-2019</b>'.";	
+			$warn = $warn. "<b>ATTENZIONE!</b></br>Articolo gestito con Lotto di Produzione.</br>Il CODICE LOTTO NON PUO' ESSERE VUOTO! </b>.";	
 		} else {
 			if (!$rs[1] and $val != ""){
 				echo "<td class=\"error\">$val</td>\n";
