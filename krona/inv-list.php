@@ -25,6 +25,9 @@ session_start();
 $cookie = preg_split("/\|/",$_SESSION['CodiceAgente']);
 $maga = "F" . substr($cookie[0],2);
 include("inv_common.php");
+if ($mode == 'sfridi') {
+	$maga = "S" . substr($cookie[0], 2);
+}
 
 $connectionstring = db_connect($dbase); 
 $Query = "SELECT DESCRIZION FROM ANAGRAFE WHERE CODICE = '$fornitore'";

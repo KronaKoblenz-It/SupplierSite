@@ -13,6 +13,5 @@ $fornitore = $cookie[0];
 define("UPLOAD_DIR", "./inv_dic_$anno/$fornitore/");
 $mode = trim($_GET['mode']);
 $attr = $mode=="attr" ? " attrezzature" : "";
-$attr = $mode == "sfridi" ? " SFRIDI" : $attr;
 
 ?>

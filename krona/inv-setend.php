@@ -17,6 +17,9 @@ session_start();
 $cookie = preg_split("/\|/",$_SESSION['CodiceAgente']);
 $maga = "F" . substr($cookie[0],2);
 include("inv_common.php");
+if ($mode == 'sfridi') {
+    $maga = "S" . substr($cookie[0], 2);
+}
 
 
 $table = ($mode == "attr" ? "u_invfinea" : "u_invfine"); 
@@ -27,7 +30,7 @@ $rs = db_query($connectionstring, $Query);
 //diconnect from database 
 db_close($connectionstring); 
 
-mail("ced@k-group.com", "Inventario$mode_$cookie[0]_$cookie[1]",  "Inventario$attr Dichiarato Chiuso!", "From: automatico@k-group.com");
+mail("inventari@k-group.com", "Inventario$mode_$cookie[0]_$cookie[1]",  "Inventario$attr Dichiarato Chiuso!", "From: automatico@k-group.com");
 mail("ced-it@k-group.com", "Inventario$mode_$cookie[0]_$cookie[1]",  "Inventario$attr Dichiarato Chiuso!", "From: automatico@k-group.com");
 
 header("location: menu-inv.php"); 

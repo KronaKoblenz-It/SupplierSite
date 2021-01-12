@@ -15,12 +15,9 @@ include("header.php");
 include("db-utils.php");
 $maga = trim($_GET['maga']);
 include("inv_common.php");
-if ($mode == 'sfridi') {
-	$maga = "S" . substr($maga, 1);
-}
 header("Content-Disposition: attachment; filename=\"inventario$mode-$maga-$anno.xls\"");
 
-$codfor = "F" . "0" . substr($maga, 1);
+$codfor = substr($maga, 0, 1) . "0" . substr($maga, 1);
 $connectionstring = db_connect($dbase); 
 $Query = "SELECT DESCRIZION FROM ANAGRAFE WHERE CODICE='$codfor'";
 $queryexe = db_query($connectionstring, $Query) or die(mysql_error() ); 

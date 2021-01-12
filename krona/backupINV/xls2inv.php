@@ -18,9 +18,6 @@ head();
 $cookie = preg_split("/\|/",$_SESSION['CodiceAgente']);
 $magf = "F" . substr($cookie[0],2);
 include("inv_common.php");
-if($mode=='sfridi'){
-	$magf = "S" . substr($cookie[0], 2);
-}
 
 $nameFile = isset($_GET['file']) ? $_GET['file'] : (isset($_POST['file']) ? $_POST['file'] : '');
 
